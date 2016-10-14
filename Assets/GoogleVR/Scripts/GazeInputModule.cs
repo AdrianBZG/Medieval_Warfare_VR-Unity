@@ -125,7 +125,10 @@ public class GazeInputModule : BaseInputModule {
 
   private void CastRayFromGaze() {
     Vector2 headPose = NormalizedCartesianToSpherical(GvrViewer.Instance.HeadPose.Orientation * Vector3.forward);
-
+	// Modify body rotation
+	//Vector3 headPosition = GvrViewer.Instance.HeadPose.Orientation;
+	//
+	
     if (pointerData == null) {
       pointerData = new PointerEventData(eventSystem);
       lastHeadPose = headPose;
