@@ -10,6 +10,12 @@ public class UIShowInput : MonoBehaviour {
         int e = System.Enum.GetNames(typeof(KeyCode)).Length;
         for (int i = 0; i < e; i++)
         {
+            
+
+        }
+
+        if (Input.anyKey)
+        {
             if (Input.GetButton("Fire1"))
             {
                 GetComponent<TextMesh>().text = "Fire1 button";
@@ -26,11 +32,11 @@ public class UIShowInput : MonoBehaviour {
             {
                 GetComponent<TextMesh>().text = "Fire4 button";
             }
-            else
-            {
-                GetComponent<TextMesh>().text = "No button";
-            }
 
+        }
+        else
+        {
+            GetComponent<TextMesh>().text = "No button";
         }
 
     }

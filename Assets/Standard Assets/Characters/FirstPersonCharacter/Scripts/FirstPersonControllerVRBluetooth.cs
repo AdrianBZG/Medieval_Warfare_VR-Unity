@@ -11,6 +11,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 [RequireComponent(typeof(AudioSource))]
 public class FirstPersonControllerVRBluetooth : MonoBehaviour {
 
+        public Transform head;  // HEAD VR
         [SerializeField]
         private bool m_IsWalking;
         [SerializeField]
@@ -74,6 +75,7 @@ public class FirstPersonControllerVRBluetooth : MonoBehaviour {
             m_Jumping = false;
             m_AudioSource = GetComponent<AudioSource>();
             m_MouseLook.Init(transform, m_Camera.transform);
+            //m_MouseLook.Init(transform, head);
         }
 
 
@@ -84,7 +86,7 @@ public class FirstPersonControllerVRBluetooth : MonoBehaviour {
             // the jump state needs to read here to make sure it is not missed
             if (!m_Jump)
             {
-                m_Jump = CrossPlatformInputManager.GetButtonDown("Jump");
+                m_Jump = Input.GetButtonDown("Fire1");
             }
 
             if (!m_PreviouslyGrounded && m_CharacterController.isGrounded)
@@ -221,8 +223,18 @@ public class FirstPersonControllerVRBluetooth : MonoBehaviour {
         private void GetInput(out float speed)
         {
             // Read input
-            float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
-            float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+            //float horizontal = CrossPlatformInputManager.GetAxis("Horizontal");
+            //float vertical = CrossPlatformInputManager.GetAxis("Vertical");
+
+            float horizontal = 0.0f; Input.GetAxis("Fire2") ;
+            float vertical = Input.GetAxis("Fire1"); 
+
+           // if (Input.GetButton("Fire1"))
+           //     vertical = 0.1f;
+            
+
+
+            
 
 
 
@@ -233,6 +245,11 @@ public class FirstPersonControllerVRBluetooth : MonoBehaviour {
             // On standalone builds, walk/run speed is modified by a key press.
             // keep track of whether or not the character is walking or running
             m_IsWalking = !Input.GetKey(KeyCode.LeftShift);
+#endif
+
+
+#if MOBILE_INPUT
+            print("Niño estamos en el movilaso");
 #endif
             // set the desired speed to be walking or running
             speed = m_IsWalking ? m_WalkSpeed : m_RunSpeed;
@@ -256,6 +273,7 @@ public class FirstPersonControllerVRBluetooth : MonoBehaviour {
 
         private void RotateView()
         {
+            //transform.rotation.SetAxisAngle(Vector3.up, head.rotation.y);
             m_MouseLook.LookRotation(transform, m_Camera.transform);
         }
 
