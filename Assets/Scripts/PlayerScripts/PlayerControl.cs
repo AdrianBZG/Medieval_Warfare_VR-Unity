@@ -30,7 +30,7 @@ public class PlayerControl : MonoBehaviour
 	private int aimBool;
 	private int flyBool;
 	private int groundedBool;
-	private Transform cameraTransform;
+	public Transform cameraTransform;
 
 	private float h;
 	private float v;
@@ -50,7 +50,7 @@ public class PlayerControl : MonoBehaviour
 	void Awake()
 	{
 		anim = GetComponent<Animator> ();
-		cameraTransform = Camera.main.transform;
+		//cameraTransform = Camera.main.transform;
 
 		speedFloat = Animator.StringToHash("Speed");
 		jumpBool = Animator.StringToHash("Jump");
