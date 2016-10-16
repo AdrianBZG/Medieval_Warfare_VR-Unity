@@ -212,8 +212,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             
             Vector2 input = new Vector2
                 {
-                    x = Input.GetAxis("Fire2"),
-                    y = Input.GetAxis("Fire1")
+                    x = Input.GetAxis("X_bluetoothController"),
+                    y = Input.GetAxis("A_bluetoothController")
                 };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
