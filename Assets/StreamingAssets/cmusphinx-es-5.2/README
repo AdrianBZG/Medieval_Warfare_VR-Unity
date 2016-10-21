@@ -1,0 +1,44 @@
+This is Spanish Voxforge acoustic model for CMUSphinx decoders -
+pocketsphinx and sphinx4 version 5.2. It was trained with SphinxTrain.
+The process of training is described in SphinxTrain tutorial.
+
+This is 16kHz model, it works for high-quality recordings. It is not
+going to work for telephone recordings, you need 8khz model then.
+
+To setup the files use build.sh script from scripts folder as a base. It
+should download required files from Voxforge, setup structure and
+extract features. Scripts are located in scripts subfolder.
+
+Testing is performed with pocketsphinx. Language model for testing with
+20k vocabulary is built from different sources with SRILM. Result of the
+testing should be similar to
+
+TOTAL Words: 11971 Correct: 8945 Errors: 3210
+TOTAL Percent correct = 74.72% Error = 26.81% Accuracy = 73.19%
+TOTAL Insertions: 184 Deletions: 779 Substitutions: 2247
+
+If you need serious language model you can build it yourself from your texts
+or from public corporas like Wikipedia dump.
+
+To use this model with pocketsphinx, pocketsphinx-android and sphinx4
+just provide it's location with -hmm pocketsphinx option. Also use the
+dictionary with dict option. For more information see the tutorial.
+
+http://cmusphinx.sourceforge.net/wiki/tutorial
+
+This is fast PTM model, it should reasonably well for mobile.
+
+===== Revision Log =====
+
+5.2
+
+Rebuilt the model with 42 hours and few fixes
+
+0.2
+
+Rebuilt PTM model from about 36 hours of Voxforge data collected so far
+
+0.1.1
+
+Updated Spanish phonetic dictionary. Previous was too heavy Mexican.
+Thanks to Guillermo Perez <g.perez@indisys.es>.
