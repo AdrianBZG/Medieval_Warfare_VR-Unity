@@ -1,26 +1,32 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using System.Collections;
 using System.Collections.Generic;
 using System;
 
-public class SpeechRecognizerDemo : MonoBehaviour, IPocketSphinxEvents {
- /* Named searches allow to quickly reconfigure the decoder */
-    private const String ACTIONS_SEARCH = "actions";
+public class SpeechRecognizerDemo : MonoBehaviour, IPocketSphinxEvents
+{
 
+    /* Named searches allow to quickly reconfigure the decoder */
+    private const String DIGITS_SEARCH = "digits";
+
+    /* Keyword we are looking for to activate menu */
+    private const String KEYPHRASE = "oh mighty computer";
+
+    #region Public serialized fields
     [SerializeField]
     private GameObject _pocketSphinxPrefab;
     [SerializeField]
     private Text _infoText;
-    [SerializeField]
-    private Text _SpeechResult;
-    [SerializeField]
-    private string[] progressTexts;
+    #endregion
 
+    #region Private fields
     private UnityPocketSphinx.PocketSphinx _pocketSphinx;
+    #endregion
 
-    private Dictionary<string, string> infoTextDict;
-
-    private void SubscribeToPocketSphinxEvents() {
+    #region Private methods
+    private void SubscribeToPocketSphinxEvents()
+    {
         EM_UnityPocketsphinx em = _pocketSphinx.EventManager;
 
         em.OnBeginningOfSpeech += OnBeginningOfSpeech;
@@ -34,7 +40,8 @@ public class SpeechRecognizerDemo : MonoBehaviour, IPocketSphinxEvents {
         em.OnTimeout += OnTimeout;
     }
 
-    private void UnsubscribeFromPocketSphinxEvents() {
+    private void UnsubscribeFromPocketSphinxEvents()
+    {
         EM_UnityPocketsphinx em = _pocketSphinx.EventManager;
 
         em.OnBeginningOfSpeech -= OnBeginningOfSpeech;
@@ -47,110 +54,101 @@ public class SpeechRecognizerDemo : MonoBehaviour, IPocketSphinxEvents {
         em.OnResult -= OnResult;
         em.OnTimeout -= OnTimeout;
     }
+    #endregion
 
-
-    /*
-    private void switchSearch(string searchKey) {
-        _pocketSphinx.StopRecognizer();
-        if (searchKey.Equals(KWS_SEARCH))
-        {
-            _pocketSphinx.StartListening(searchKey);
-        }
-        else
-        {
-            _pocketSphinx.StartListening(searchKey, 10000);
-        }
-
-        string text;
-        infoTextDict.TryGetValue(searchKey, out text);
-
-        _infoText.text = text;
-        _SpeechResult.text = "Say something!";
-    }
-    */
-
-	/// <summary>
-	/// Ge an instance of PocketSphinx and initialize event subscriber
-	/// </summary>
-    void Awake() {
+    #region MonoBehaviour methods
+    void Awake()
+    {
         UnityEngine.Assertions.Assert.IsNotNull(_pocketSphinxPrefab, "No PocketSphinx prefab assigned.");
         var obj = Instantiate(_pocketSphinxPrefab, this.transform) as GameObject;
         _pocketSphinx = obj.GetComponent<UnityPocketSphinx.PocketSphinx>();
 
-        if (_pocketSphinx == null) {
+        if (_pocketSphinx == null)
+        {
             Debug.LogError("[SpeechRecognizerDemo] No PocketSphinx component found. Did you assign the right prefab???");
         }
 
         SubscribeToPocketSphinxEvents();
 
-		/// TODO: Put a load page
-        _infoText.text = "Please wait for Speech Recognition engine to load.";
-        _SpeechResult.text = "Loading human dictionary...";
+        _infoText.text = "Loaded voice Recognition";
     }
 
-    void Start() {
+    void Start()
+    {
         _pocketSphinx.SetAcousticModelPath("en-us-ptm");
-		Debug.Log("[SpeechRecognizerDemo] " + Application.streamingAssetsPath + "/cmusphinx-es-5.2/");
-		_pocketSphinx.SetDictionaryPath("cmusphinx-es-5.2/etc/voxforge_es_sphinx.dic");
+        //Debug.Log("[SpeechRecognizerDemo] " + Application.streamingAssetsPath + "cmudict-en-us.dict");
+        _pocketSphinx.SetDictionaryPath("cmudict-en-us.dict");
         _pocketSphinx.SetKeywordThreshold(1e-45f);
-		// Unknow option
-        // _pocketSphinx.AddBoolean("-allphone_ci", true);
+        _pocketSphinx.AddBoolean("-allphone_ci", true);
 
         // These one are optional
-        _pocketSphinx.AddGrammarSearchPath(ACTIONS_SEARCH, "actions.gram");
+        _pocketSphinx.AddGrammarSearchPath(DIGITS_SEARCH, "actions.gram");
+
         _pocketSphinx.SetupRecognizer();
     }
     
 
-    void OnDestroy() {
-        if (_pocketSphinx != null) {
+    void OnDestroy()
+    {
+        if (_pocketSphinx != null)
+        {
             UnsubscribeFromPocketSphinxEvents();
             _pocketSphinx.DestroyRecognizer();
         }
     }
+    #endregion
 
-    public void OnPartialResult(string hypothesis) {
-        _SpeechResult.text = hypothesis;
-
+    #region PocketSphinx event methods
+    public void OnPartialResult(string hypothesis)
+    {
+        _infoText.text = hypothesis;
     }
 
-    public void OnResult(string hypothesis) {
-        _SpeechResult.text = hypothesis;
+    public void OnResult(string hypothesis)
+    {
+        _infoText.text = "Result" + hypothesis;
     }
 
-    /// <summary>
-    /// TODO: Put something like listening
-    /// </summary>
-    public void OnBeginningOfSpeech() {
-        
+    public void OnBeginningOfSpeech()
+    {
+        _infoText.text = "Listening";
     }
 
-    public void OnEndOfSpeech() {
+    public void OnEndOfSpeech()
+    {
+        _infoText.text = "Processing";
     }
 
-    public void OnError(string error) {
+    public void OnError(string error)
+    {
+        _infoText.text = "Error: " + error;
         Debug.LogError("[SpeechRecognizerDemo] An error ocurred at OnError()");
         Debug.LogError("[SpeechRecognizerDemo] error = " + error);
     }
 
-    public void OnTimeout() {
+    public void OnTimeout()
+    {
+        _infoText.text = "TimeOut";
         Debug.Log("[SpeechRecognizerDemo] Speech Recognition timed out");
     }
 
     public void OnInitializeSuccess()
     {
-        _pocketSphinx.AddKeyphraseSearch(ACTIONS_SEARCH, "");
+        _pocketSphinx.StartListening("digits");
     }
 
     public void OnInitializeFailed(string error)
     {
+        _infoText.text = "FAIL Initialize" + error;
         Debug.LogError("[SpeechRecognizerDemo] An error ocurred on Initialization PocketSphinx.");
         Debug.LogError("[SpeechRecognizerDemo] error = " + error);
     }
 
     public void OnPocketSphinxError(string error)
     {
+        _infoText.text = "FAIL Initialize SPHINX" + error;
         Debug.LogError("[SpeechRecognizerDemo] An error ocurred on OnPocketSphinxError().");
         Debug.LogError("[SpeechRecognizerDemo] error = " + error);
     }
+    #endregion
 }

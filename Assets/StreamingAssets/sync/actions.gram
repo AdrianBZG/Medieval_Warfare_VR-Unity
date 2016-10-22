@@ -1,0 +1,7 @@
+#JSGF V1.0;
+
+grammar actions;
+
+<menuActions> = dungeon | maze | options | exit;
+
+public <actions> = <menuActions>;
