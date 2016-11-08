@@ -1,0 +1,20 @@
+fileFormatVersion: 2
+guid: 891fedaff5523524da46109b115eb7aa
+timeCreated: 1478634072
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - adventurer: {fileID: 400090, guid: 6e762afdaf995f841be3a9d4eec31c4c, type: 2}
+  - adventurerArmor: {fileID: 400004, guid: 690aec65e691d4b4ba3f707db5b8a43f, type: 2}
+  - sword: {fileID: 400006, guid: f3f66713b5466aa498e072963c6b1ea2, type: 2}
+  - shield: {instanceID: 0}
+  - swooshAudio: {instanceID: 0}
+  - noiseAudio: {instanceID: 0}
+  - treasureChest: {instanceID: 0}
+  - lever: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
