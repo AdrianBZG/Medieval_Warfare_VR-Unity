@@ -175,14 +175,14 @@
     <Compile Include="Assets\Scripts\SpeechRecognizerDemo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\MobileWater\ReadMe.txt" />
-    <None Include="Assets\MobileWater\Shaders\MobileWater.shader" />
     <None Include="Assets\Packages\Adventurer\Readme.txt" />
     <None Include="Assets\Packages\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\Packages\GoogleVR\Legacy\Resources\SolidColor.shader" />
     <None Include="Assets\Packages\GoogleVR\Legacy\Resources\UnlitTexture.shader" />
     <None Include="Assets\Packages\GoogleVR\Resources\UI\GvrReticleShader.shader" />
     <None Include="Assets\Packages\Medieval Bridge\Shaders\Double sided.shader" />
+    <None Include="Assets\Packages\MobileWater\ReadMe.txt" />
+    <None Include="Assets\Packages\MobileWater\Shaders\MobileWater.shader" />
     <None Include="Assets\Packages\NatureStarterKit2\Standard Assets\Effects\GlassRefraction\Shaders\GlassStainedBumpDistort.shader" />
     <None Include="Assets\Packages\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlendModesOverlay.shader" />
     <None Include="Assets\Packages\NatureStarterKit2\Standard Assets\Effects\ImageEffects\Shaders\BlurEffectConeTaps.shader" />
