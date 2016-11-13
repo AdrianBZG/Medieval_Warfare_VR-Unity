@@ -211,11 +211,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Vector2 GetInput()
         {
-            
+
+
+
             Vector2 input = new Vector2
-                {
-                    x = CrossPlatformInputManager.GetAxis("Horizontal"),
-                    y = CrossPlatformInputManager.GetAxis("Vertical")
+            {
+                x = Input.GetAxis("A_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
+                y = Input.GetAxis("X_BluetoothController")
                 };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
