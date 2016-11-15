@@ -175,28 +175,14 @@ private var tr : Transform;
 
 private var controller : CharacterController;
 
-private var audioStep: AudioSource;
-
 function Awake () {
 	controller = GetComponent (CharacterController);
 	tr = transform;
-	audioStep = GetComponent("AudioSource") as AudioSource;
 }
 
 private function UpdateFunction () {
 	// We copy the actual velocity into a temporary variable that we can manipulate.
 	var velocity : Vector3 = movement.velocity;
-	
-	if (velocity.magnitude>0){
-		if (!audioStep.isPlaying){
-			audioStep.Play();
-		}
-	}
-	else{
-		if (audioStep.isPlaying){
-			audioStep.Stop();
-		}
-	}
 	
 	// Update velocity based on input
 	velocity = ApplyInputVelocityChange(velocity);
