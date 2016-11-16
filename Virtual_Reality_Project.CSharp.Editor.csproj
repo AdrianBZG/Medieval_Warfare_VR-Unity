@@ -79,6 +79,9 @@
     <Reference Include="UnityEditor.TreeEditor">
       <HintPath>Library\UnityAssemblies\UnityEditor.TreeEditor.dll</HintPath>
     </Reference>
+    <Reference Include="UnityEngine.Analytics">
+      <HintPath>Library\UnityAssemblies\UnityEngine.Analytics.dll</HintPath>
+    </Reference>
     <Reference Include="UnityEditor.Graphs">
       <HintPath>Library\UnityAssemblies\UnityEditor.Graphs.dll</HintPath>
     </Reference>
