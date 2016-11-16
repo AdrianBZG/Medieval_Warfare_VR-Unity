@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\GunManager.cs" />
+    <Compile Include="Assets\HeadCamRotation.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\ControllerDemo\ControllerDebugInfo.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\ControllerDemo\ControllerDemoManager.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\HeadsetDemo\FPS.cs" />
