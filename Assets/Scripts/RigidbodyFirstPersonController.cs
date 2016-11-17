@@ -140,6 +140,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GroundCheck();
             Vector2 input = GetInput();
 
+            print(input);
+
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
                 // always move along the camera forward as it is the direction that it being aimed at
@@ -156,7 +158,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 }
             }
 
-            if (m_IsGrounded)
+            if (true)
+                 //(m_IsGrounded)
             {
                 m_RigidBody.drag = 5f;
 
@@ -209,17 +212,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Vector2 GetInput()
         {
-            
+
             Vector2 input = new Vector2
-                {
-                    x = Input.GetAxis("X_bluetoothController"),
-                    y = Input.GetAxis("A_bluetoothController")
-                };
+            {
+                x = Input.GetAxis("Horizontal"),
+                y = Input.GetAxis("Vertical")
+       
+                   // x = Input.GetAxis("X_BluetoothController"),
+                   // y = Input.GetAxis("A_BluetoothController")
+            };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }
 
 
+        
         private void RotateView()
         {
             //avoids the mouse looking if the game is effectively paused
@@ -237,6 +244,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_RigidBody.velocity = velRotation*m_RigidBody.velocity;
             }
         }
+        
 
 
         /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom

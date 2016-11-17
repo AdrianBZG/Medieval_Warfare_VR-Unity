@@ -218,7 +218,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 x = Input.GetAxis("A_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
                 y = Input.GetAxis("X_BluetoothController")
-                };
+            };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }

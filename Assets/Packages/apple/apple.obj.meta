@@ -1,0 +1,160 @@
+fileFormatVersion: 2
+guid: 3fa67e18ef381ad4bb14a1208c36e297
+timeCreated: 1479334752
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: 2v_apple
+    100002: 2v_apple001
+    100004: 2v_apple002
+    100006: 2v_apple003
+    100008: 2v_apple004
+    100010: 2v_apple005
+    100012: 2v_apple007
+    100014: apple
+    100016: //RootNode
+    100018: apple001
+    100020: apple002
+    100022: apple003
+    100024: apple004
+    100026: apple005
+    100028: apple006
+    100030: apple007
+    100032: subd
+    100034: subd_MeshPart0
+    100036: subd_MeshPart1
+    400000: 2v_apple
+    400002: 2v_apple001
+    400004: 2v_apple002
+    400006: 2v_apple003
+    400008: 2v_apple004
+    400010: 2v_apple005
+    400012: 2v_apple007
+    400014: apple
+    400016: //RootNode
+    400018: apple001
+    400020: apple002
+    400022: apple003
+    400024: apple004
+    400026: apple005
+    400028: apple006
+    400030: apple007
+    400032: subd
+    400034: subd_MeshPart0
+    400036: subd_MeshPart1
+    2300000: 2v_apple
+    2300002: 2v_apple001
+    2300004: 2v_apple002
+    2300006: 2v_apple003
+    2300008: 2v_apple004
+    2300010: 2v_apple005
+    2300012: 2v_apple007
+    2300014: apple
+    2300016: apple001
+    2300018: apple002
+    2300020: apple003
+    2300022: apple004
+    2300024: apple005
+    2300026: apple006
+    2300028: apple007
+    2300030: subd_MeshPart0
+    2300032: subd_MeshPart1
+    3300000: 2v_apple
+    3300002: 2v_apple001
+    3300004: 2v_apple002
+    3300006: 2v_apple003
+    3300008: 2v_apple004
+    3300010: 2v_apple005
+    3300012: 2v_apple007
+    3300014: apple
+    3300016: apple001
+    3300018: apple002
+    3300020: apple003
+    3300022: apple004
+    3300024: apple005
+    3300026: apple006
+    3300028: apple007
+    3300030: subd_MeshPart0
+    3300032: subd_MeshPart1
+    4300000: 2v_apple
+    4300002: 2v_apple001
+    4300004: 2v_apple002
+    4300006: 2v_apple003
+    4300008: 2v_apple004
+    4300010: 2v_apple005
+    4300012: 2v_apple007
+    4300014: apple
+    4300016: apple001
+    4300018: apple002
+    4300020: apple003
+    4300022: apple004
+    4300024: apple005
+    4300026: apple006
+    4300028: apple007
+    4300030: subd_MeshPart0
+    4300032: subd_MeshPart1
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
