@@ -177,6 +177,7 @@
     <Compile Include="Assets\Packages\Toon_Level_Kit\Resources\Scripts\HTSpriteSheet.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuEvents.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
+    <Compile Include="Assets\dragonMovement.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Packages\Adventurer\Readme.txt" />
