@@ -1,0 +1,67 @@
+# Blender MTL File: 'smaug-exp.blend'
+# Material Count: 6
+
+newmtl Skin
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 0.700000
+illum 1
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/v2.0/skin-t3.tga
+map_Bump /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/Skin-n.tga
+map_Ks /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/skin-n2.tga
+
+newmtl eyes
+Ns 749.999996
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.122500 0.041448
+Ks 0.810680 0.810680 0.810680
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/v2.0/eyes-t.tga
+map_Ke /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/v2.0/eyes-t.tga
+
+newmtl mouth
+Ns 683.035724
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.266990 0.061450 0.075439
+Ni 1.000000
+d 1.000000
+illum 2
+map_Bump /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/mouth-b.tif
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/mouth-t.png
+
+newmtl teeth
+Ns 584.821425
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.645631 0.196299 0.082555
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/teeth-t.tga
+
+newmtl tongue
+Ns 700.892828
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.402913 0.132963 0.115333
+Ni 1.000000
+d 1.000000
+illum 2
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/tongue-t.png
+map_Bump /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/tongue-b.tif
+
+newmtl wings
+Ns 96.078431
+Ka 0.000000 0.000000 0.000000
+Kd 0.640000 0.640000 0.640000
+Ks 0.000000 0.000000 0.000000
+Ni 1.000000
+d 1.000000
+illum 1
+map_Kd /home/andry-p/Modelli/Poser/dragon/v 6.0/textures/wings-a.tga

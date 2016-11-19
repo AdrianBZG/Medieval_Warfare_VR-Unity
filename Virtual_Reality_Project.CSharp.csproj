@@ -180,6 +180,7 @@
     <Compile Include="Assets\dragonMovement.cs" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Assets\Horse\SoftAlpha.shader" />
     <None Include="Assets\Packages\Adventurer\Readme.txt" />
     <None Include="Assets\Packages\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\Packages\GoogleVR\Legacy\Resources\SolidColor.shader" />
