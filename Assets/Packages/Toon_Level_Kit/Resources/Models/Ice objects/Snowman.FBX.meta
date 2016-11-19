@@ -3,7 +3,12 @@ guid: c2893d6f678c46348a985284dd6ca1ed
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Snowman
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

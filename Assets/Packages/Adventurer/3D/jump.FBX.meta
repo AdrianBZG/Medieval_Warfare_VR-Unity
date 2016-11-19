@@ -3,7 +3,98 @@ guid: 1b14bd8bcfa166741a10ae157cc3e59d
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: adventurer
+    100002: Bip01
+    100004: Bip01 Head
+    100006: Bip01 L Calf
+    100008: Bip01 L Clavicle
+    100010: Bip01 L Finger0
+    100012: Bip01 L Finger01
+    100014: Bip01 L Finger1
+    100016: Bip01 L Finger11
+    100018: Bip01 L Finger2
+    100020: Bip01 L Finger21
+    100022: Bip01 L Finger3
+    100024: Bip01 L Finger31
+    100026: Bip01 L Finger4
+    100028: Bip01 L Finger41
+    100030: Bip01 L Foot
+    100032: Bip01 L Forearm
+    100034: Bip01 L Hand
+    100036: Bip01 L Thigh
+    100038: Bip01 L Toe0
+    100040: Bip01 L UpperArm
+    100042: Bip01 Neck
+    100044: Bip01 Pelvis
+    100046: Bip01 R Calf
+    100048: Bip01 R Clavicle
+    100050: Bip01 R Finger0
+    100052: Bip01 R Finger01
+    100054: Bip01 R Finger1
+    100056: Bip01 R Finger11
+    100058: Bip01 R Finger2
+    100060: Bip01 R Finger21
+    100062: Bip01 R Finger3
+    100064: Bip01 R Finger31
+    100066: Bip01 R Finger4
+    100068: Bip01 R Finger41
+    100070: Bip01 R Foot
+    100072: Bip01 R Forearm
+    100074: Bip01 R Hand
+    100076: Bip01 R Thigh
+    100078: Bip01 R Toe0
+    100080: Bip01 R UpperArm
+    100082: Bip01 Spine
+    100084: Bip01 Spine1
+    100086: //RootNode
+    400000: adventurer
+    400002: Bip01
+    400004: Bip01 Head
+    400006: Bip01 L Calf
+    400008: Bip01 L Clavicle
+    400010: Bip01 L Finger0
+    400012: Bip01 L Finger01
+    400014: Bip01 L Finger1
+    400016: Bip01 L Finger11
+    400018: Bip01 L Finger2
+    400020: Bip01 L Finger21
+    400022: Bip01 L Finger3
+    400024: Bip01 L Finger31
+    400026: Bip01 L Finger4
+    400028: Bip01 L Finger41
+    400030: Bip01 L Foot
+    400032: Bip01 L Forearm
+    400034: Bip01 L Hand
+    400036: Bip01 L Thigh
+    400038: Bip01 L Toe0
+    400040: Bip01 L UpperArm
+    400042: Bip01 Neck
+    400044: Bip01 Pelvis
+    400046: Bip01 R Calf
+    400048: Bip01 R Clavicle
+    400050: Bip01 R Finger0
+    400052: Bip01 R Finger01
+    400054: Bip01 R Finger1
+    400056: Bip01 R Finger11
+    400058: Bip01 R Finger2
+    400060: Bip01 R Finger21
+    400062: Bip01 R Finger3
+    400064: Bip01 R Finger31
+    400066: Bip01 R Finger4
+    400068: Bip01 R Finger41
+    400070: Bip01 R Foot
+    400072: Bip01 R Forearm
+    400074: Bip01 R Hand
+    400076: Bip01 R Thigh
+    400078: Bip01 R Toe0
+    400080: Bip01 R UpperArm
+    400082: Bip01 Spine
+    400084: Bip01 Spine1
+    400086: //RootNode
     4300000: adventurer
+    7400000: jump
+    11100000: //RootNode
+    13700000: adventurer
   materials:
     importMaterials: 1
     materialName: 3

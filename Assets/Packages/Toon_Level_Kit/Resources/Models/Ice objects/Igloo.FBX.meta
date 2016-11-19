@@ -3,7 +3,12 @@ guid: a0fbe38b7b31f47c0b1e58cc9a112b6f
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Igloo01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
