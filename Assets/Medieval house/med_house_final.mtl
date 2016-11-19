@@ -1,0 +1,278 @@
+# 
+# Wavefront material file
+# Converted by the DEEP Exploration  Deep Exploration 5.5 5.5.3.2642 Release
+# Right Hemisphere, LTD
+# http://www.righthemisphere.com/
+# 
+
+newmtl Material__3
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd D:\\model\\med_house\\wood01.dds
+map_bump D:\\model\\med_house\\wood01_n.dds
+bump D:\\model\\med_house\\wood01_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__2
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 9.84915
+map_Kd D:\\model\\med_house\\roof_slate.jpg
+map_bump D:\\model\\med_house\\roof_slate_bm_NRM.jpg
+bump D:\\model\\med_house\\roof_slate_bm_NRM.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__5
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 16
+map_Kd D:\\model\\med_house\\wall1.jpg
+map_bump D:\\model\\med_house\\wall1.jpg
+bump D:\\model\\med_house\\wall1.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__6
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 4
+map_Kd D:\\model\\med_house\\stone05.dds
+map_bump D:\\model\\med_house\\stone05_n.dds
+bump D:\\model\\med_house\\stone05_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__4
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 9.84915
+map_Kd D:\\model\\med_house\\wall.jpg
+map_bump D:\\model\\med_house\\wall.jpg
+bump D:\\model\\med_house\\wall.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__9
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 6.49802
+map_Kd D:\\model\\med_house\\roof_entrance.dds
+map_bump D:\\model\\med_house\\roof_entrance_ddn.jpg
+bump D:\\model\\med_house\\roof_entrance_ddn.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__8
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd D:\\model\\med_house\\windows_doors.jpg
+map_bump D:\\model\\med_house\\windows_doors_NRM.jpg
+bump D:\\model\\med_house\\windows_doors_NRM.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__7
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 12.1257
+map_Kd D:\\model\\med_house\\trim01.dds
+map_bump D:\\model\\med_house\\trim01_NRM.jpg
+bump D:\\model\\med_house\\trim01_NRM.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__10
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 12.1257
+map_Kd D:\\model\\med_house\\rf1xintstonea.dds
+map_bump D:\\model\\med_house\\rf1xintstonea_NRM.jpg
+bump D:\\model\\med_house\\rf1xintstonea_NRM.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__12
+Ka 0.588 0.588 0.588
+Kd 0.588 0.588 0.588
+Ks 0.9 0.9 0.9
+illum 2
+Ns 9.84915
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__13
+Ka 0.898039 0.898039 0.898039
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd D:\\model\\med_house\\upperfloor01.dds
+map_bump D:\\model\\med_house\\upperfloor01_n.dds
+bump D:\\model\\med_house\\upperfloor01_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__14
+Ka 0.898039 0.898039 0.898039
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd D:\\model\\med_house\\upperfloor01.dds
+map_bump D:\\model\\med_house\\upperfloor01_n.dds
+bump D:\\model\\med_house\\upperfloor01_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__17
+Ka 0.588 0.588 0.588
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 11.3137
+map_Kd D:\\model\\med_house\\flatstone01.dds
+map_bump D:\\model\\med_house\\flatstone01_n.dds
+bump D:\\model\\med_house\\flatstone01_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__16
+Ka 0.898039 0.898039 0.898039
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 22.6274
+map_Kd D:\\model\\med_house\\rf1xintstonea.dds
+map_bump D:\\model\\med_house\\rf1xintstonea_NRM.jpg
+bump D:\\model\\med_house\\rf1xintstonea_NRM.jpg
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl _2___Default
+Ka 0.231373 0.105882 0.0666667
+Kd 0.231373 0.105882 0.0666667
+Ks 0.9 0.9 0.9
+illum 2
+Ns 12.996
+map_Kd 
+map_bump 
+bump 
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl _3___Default
+Ka 0.588235 0.588235 0.588235
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 12.1257
+map_Kd D:\\model\\med_house\\arenastonegrey08.dds
+map_bump D:\\model\\med_house\\arenastonegrey08_n.dds
+bump D:\\model\\med_house\\arenastonegrey08_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 
+
+newmtl Material__15
+Ka 0.898039 0.898039 0.898039
+Kd 1 1 1
+Ks 0.9 0.9 0.9
+illum 2
+Ns 8
+map_Kd D:\\model\\med_house\\woodstain01.dds
+map_bump D:\\model\\med_house\\woodstain01_n.dds
+bump D:\\model\\med_house\\woodstain01_n.dds
+map_opacity 
+map_d 
+refl 
+map_kS 
+map_kA 
+map_Ns 

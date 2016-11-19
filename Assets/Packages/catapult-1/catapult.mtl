@@ -1,0 +1,89 @@
+# 3ds Max Wavefront OBJ Exporter v0.97b - (c)2007 guruware
+# Datei erstellt: 07.09.2014 19:08:44
+
+newmtl Material__63
+	Ns 70.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 1.000000 1.000000 1.000000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.900000 0.900000 0.900000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz-map.uvw.jpg
+	map_Kd C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz-map.uvw.jpg
+	map_Ks C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz-map_SPEC.jpg
+	map_bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz-map_COLOR.jpg
+	bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz-map_COLOR.jpg
+
+newmtl 07___Default
+	Ns 70.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 1.000000 1.000000 1.000000
+	Kd 0.588235 0.588235 0.588235
+	Ks 0.900000 0.900000 0.900000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz.map-2.jpg
+	map_Kd C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz.map-2.jpg
+	map_Ks C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz_SPEC.jpg
+	map_bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz_COLOR.jpg
+	bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Gerüst\holz_COLOR.jpg
+
+newmtl Material__61
+	Ns 90.000000
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588000 0.588000 0.588000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.900000 0.900000 0.900000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Metal-maps\metal-map.jpg
+	map_Kd C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Metal-maps\metal-map.jpg
+	map_Ks C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Metal-maps\metal-map_SPEC.jpg
+	map_bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Metal-maps\metal-map_SPEC.jpg
+	bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Metal-maps\metal-map_SPEC.jpg
+	map_refl Map__46_Raytrace.tga
+
+newmtl 13___Default
+	Ns 79.999992
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 0.588235 0.588235 0.588235
+	Kd 0.588235 0.588235 0.588235
+	Ks 0.900000 0.900000 0.900000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Wurfarm\wurfarm-map.jpg
+	map_Kd C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Wurfarm\wurfarm-map.jpg
+	map_Ks C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Wurfarm\wurfarm-map-spec-.jpg
+	map_bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Wurfarm\wurfarm-map-bump.jpg
+	bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Wurfarm\wurfarm-map-bump.jpg
+
+newmtl Material__64
+	Ns 79.999992
+	Ni 1.500000
+	d 1.000000
+	Tr 0.000000
+	Tf 1.000000 1.000000 1.000000 
+	illum 2
+	Ka 1.000000 1.000000 1.000000
+	Kd 0.588000 0.588000 0.588000
+	Ks 0.900000 0.900000 0.900000
+	Ke 0.000000 0.000000 0.000000
+	map_Ka C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Rad-map-ref\rad-map-wood-metal.jpg
+	map_Kd C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Rad-map-ref\rad-map-wood-metal.jpg
+	map_Ks C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Rad-map-ref\rad-map-wood-metal-ref-.jpg
+	map_bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Rad-map-ref\rad-map-wood-metal-crazy_COLOR.jpg
+	bump C:\Users\Alexander\3d modelle\Fahrzeuge\Katapult\Rad-map-ref\rad-map-wood-metal-crazy_COLOR.jpg
+	map_refl Map__62_Raytrace.tga

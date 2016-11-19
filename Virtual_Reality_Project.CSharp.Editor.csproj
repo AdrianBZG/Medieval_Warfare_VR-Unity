@@ -141,7 +141,7 @@
     <Compile Include="Assets\Packages\Toon_Level_Kit\Resources\Scripts\Editor\MaxAtlasSize.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Horse\SoftAlpha.shader" />
+    <None Include="Assets\Materials\Horse\SoftAlpha.shader" />
     <None Include="Assets\Packages\Adventurer\Readme.txt" />
     <None Include="Assets\Packages\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\Packages\GoogleVR\Legacy\Resources\SolidColor.shader" />

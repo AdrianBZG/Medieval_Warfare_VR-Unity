@@ -81,8 +81,6 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GunManager.cs" />
-    <Compile Include="Assets\HeadCamRotation.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\ControllerDemo\ControllerDebugInfo.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\ControllerDemo\ControllerDemoManager.cs" />
     <Compile Include="Assets\Packages\GoogleVR\DemoScenes\HeadsetDemo\FPS.cs" />
@@ -175,12 +173,14 @@
     <Compile Include="Assets\Packages\Toon_Level_Kit\Resources\Scripts\FpsCounter.cs" />
     <Compile Include="Assets\Packages\Toon_Level_Kit\Resources\Scripts\HTLiquidSpriteSheet.cs" />
     <Compile Include="Assets\Packages\Toon_Level_Kit\Resources\Scripts\HTSpriteSheet.cs" />
+    <Compile Include="Assets\Scripts\GunManager.cs" />
+    <Compile Include="Assets\Scripts\HeadCamRotation.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuEvents.cs" />
     <Compile Include="Assets\Scripts\RigidbodyFirstPersonController.cs" />
-    <Compile Include="Assets\dragonMovement.cs" />
+    <Compile Include="Assets\Scripts\dragonMovement.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Horse\SoftAlpha.shader" />
+    <None Include="Assets\Materials\Horse\SoftAlpha.shader" />
     <None Include="Assets\Packages\Adventurer\Readme.txt" />
     <None Include="Assets\Packages\GoogleVR\Distortion\GvrDistortion.cginc" />
     <None Include="Assets\Packages\GoogleVR\Legacy\Resources\SolidColor.shader" />
