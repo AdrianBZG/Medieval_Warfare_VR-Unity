@@ -8,6 +8,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+        public Animator anim;
+        int idleHash = Animator.StringToHash("idle");
+
         [Serializable]
         public class MovementSettings
         {
@@ -123,6 +126,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init (transform, cam.transform);
+
+
         }
 
 
@@ -142,8 +147,12 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GroundCheck();
             Vector2 input = GetInput();
 
+
+            anim.SetFloat("Speed", hor);
+
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
+                anim.SetTrigger(idleHash);
                 // always move along the camera forward as it is the direction that it being aimed at
                 Vector3 desiredMove = cam.transform.forward*input.y + cam.transform.right*input.x;
                 desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
@@ -208,18 +217,21 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
+        float hor;
 
         private Vector2 GetInput()
         {
 
+            hor = Input.GetAxis("Horizontal");
 
 
             Vector2 input = new Vector2
             {
-                x = Input.GetAxis("A_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
-                y = Input.GetAxis("X_BluetoothController")
+                x = Input.GetAxis("Horizontal"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
+                y = Input.GetAxis("Vertical")
             };
-			movementSettings.UpdateDesiredTargetSpeed(input);
+
+            movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }
 

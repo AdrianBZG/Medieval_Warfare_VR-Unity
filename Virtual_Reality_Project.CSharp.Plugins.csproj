@@ -78,6 +78,8 @@
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\FirstPersonController.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\HeadBob.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\MouseLook.cs" />
+    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\PlayerAnimationManager.cs" />
+    <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\PlayerMovement.cs" />
     <Compile Include="Assets\Standard Assets\Characters\FirstPersonCharacter\Scripts\RigidbodyFirstPersonController.cs" />
     <Compile Include="Assets\Standard Assets\Characters\RollerBall\Scripts\Ball.cs" />
     <Compile Include="Assets\Standard Assets\Characters\RollerBall\Scripts\BallUserControl.cs" />
