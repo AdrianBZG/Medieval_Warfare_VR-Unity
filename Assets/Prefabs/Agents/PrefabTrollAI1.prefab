@@ -1834,11 +1834,11 @@ MonoBehaviour:
       /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
       id="8"><field value="True" type="System.Boolean" id="_showVisual" /><field value="Eyes"
       type="System.String" id="_sensorName" /><field value="True" type="System.Boolean"
-      id="_isActive" /><field value="0,6,0,6,0,6,1" type="UnityEngine.Color" id="_sensorColor"
-      /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
-      type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
-      id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+      id="_isActive" /><field value="0,05372992,0,02124786,0,9632353,1" type="UnityEngine.Color"
+      id="_sensorColor" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3"
+      /><field value="0,2,369848,0,7090378" type="UnityEngine.Vector3" id="_positionOffset"
+      /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field
+      type="System.Collections.Generic.List" id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       /><field value="15" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="90" type="System.Single"
       id="_horizontalAngle" /><field value="90" type="System.Single" id="_verticalAngle"
