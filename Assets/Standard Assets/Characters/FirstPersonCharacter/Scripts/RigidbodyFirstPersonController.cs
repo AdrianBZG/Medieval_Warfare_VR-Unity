@@ -24,7 +24,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
 #if !MOBILE_INPUT
-            private bool m_Running;
+            public bool m_Running;
 #endif
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
@@ -128,6 +128,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             mouseLook.Init (transform, cam.transform);
 
 
+
         }
 
 
@@ -148,9 +149,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector2 input = GetInput();
 
 
+			anim.SetBool("run",movementSettings.m_Running);
             anim.SetFloat("speed", hor);
 
-			print("Speed: "  + anim.GetFloat("Speed"));
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
