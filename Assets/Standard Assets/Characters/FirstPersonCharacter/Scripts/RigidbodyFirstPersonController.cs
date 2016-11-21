@@ -9,7 +9,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
         public Animator anim;
-        int idleHash = Animator.StringToHash("idle");
+        //int idleHash = Animator.StringToHash("idle");
 
         [Serializable]
         public class MovementSettings
@@ -148,11 +148,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
             Vector2 input = GetInput();
 
 
-            anim.SetFloat("Speed", hor);
+            anim.SetFloat("speed", hor);
+
+			print("Speed: "  + anim.GetFloat("Speed"));
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
-                anim.SetTrigger(idleHash);
+                //anim.SetTrigger(idleHash);
                 // always move along the camera forward as it is the direction that it being aimed at
                 Vector3 desiredMove = cam.transform.forward*input.y + cam.transform.right*input.x;
                 desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
@@ -222,7 +224,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         private Vector2 GetInput()
         {
 
-            hor = Input.GetAxis("Horizontal");
+            hor = Input.GetAxis("Vertical");
 
 
             Vector2 input = new Vector2
