@@ -233,6 +233,7 @@ GameObject:
   - 111: {fileID: 111000012281832000}
   - 136: {fileID: 136000013729741740}
   - 54: {fileID: 54000011639070486}
+  - 114: {fileID: 114000011479946672}
   m_Layer: 0
   m_Name: PrefabSoldadoHumanoAI1
   m_TagString: Untagged
@@ -864,7 +865,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011807786080}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.99, y: 2.39, z: -2.39}
+  m_LocalPosition: {x: -2.99, y: 0.34, z: -2.39}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1561,10 +1562,24 @@ Animation:
   - {fileID: 7400000, guid: 095660efc4b4fb24dbcfb163eafe456d, type: 3}
   - {fileID: 7400000, guid: 929f35178c66e144db2f78112e8181bd, type: 3}
   - {fileID: 7400000, guid: 0cfdb4eeecb10174aa816fe783c7f3be, type: 3}
+  - {fileID: 7400000, guid: 765dfc8fcb61d6a4989e160760f67201, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114000011479946672
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011807786080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e159f88dd10c48dabe3c3e6648211a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  agentEntity: {fileID: 1000012753145732}
+  agentEngine: {fileID: 1000012737316936}
 --- !u!114 &114000011902809394
 MonoBehaviour:
   m_ObjectHideFlags: 1

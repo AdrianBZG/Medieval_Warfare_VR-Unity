@@ -303,8 +303,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1031281764}
   m_LocalRotation: {x: 0, y: -0.9269548, z: 0, w: 0.37517303}
-  m_LocalPosition: {x: -4.049165, y: 0.5, z: -9.109766}
-  m_LocalScale: {x: 6.6, y: 1, z: 1}
+  m_LocalPosition: {x: -4.049165, y: 2.29, z: -9.109766}
+  m_LocalScale: {x: 6.6, y: 5.487481, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1747615880}
@@ -382,8 +382,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1097803062}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.2747517, y: 0.5, z: -7.760515}
-  m_LocalScale: {x: 2, y: 1, z: 1}
+  m_LocalPosition: {x: 5.2747517, y: 2.28, z: -7.760515}
+  m_LocalScale: {x: 2, y: 5.631455, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1747615880}
@@ -636,7 +636,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000010926320032, guid: 78fe1be79aeed4041a704a9851c2f51f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 2.39
+      value: 0.34
       objectReference: {fileID: 0}
     - target: {fileID: 4000010926320032, guid: 78fe1be79aeed4041a704a9851c2f51f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -719,8 +719,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1815394879}
   m_LocalRotation: {x: 0, y: -0.44025263, z: 0, w: 0.89787394}
-  m_LocalPosition: {x: 0.2761178, y: 0.5, z: -5.223701}
-  m_LocalScale: {x: 3, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2761178, y: 1.71, z: -5.223701}
+  m_LocalScale: {x: 3, y: 4.388781, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1747615880}
@@ -1045,7 +1045,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4000013971393718, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1.0143845
+      value: 0.27
       objectReference: {fileID: 0}
     - target: {fileID: 4000013971393718, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1084,9 +1084,9 @@ Prefab:
         childrenvisible="False" /><field type="RAIN.Minds.BasicMind" reference="2"
         id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
         reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
-        reference="4" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
+        reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
         reference="5" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-        reference="6" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+        reference="6" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
         id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
         /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
         type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
