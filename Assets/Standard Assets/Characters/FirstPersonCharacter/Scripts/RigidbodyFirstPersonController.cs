@@ -151,6 +151,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 			anim.SetBool("run",movementSettings.m_Running);
             anim.SetFloat("speed", hor);
+			anim.SetBool("jump", m_Jumping);
 
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
