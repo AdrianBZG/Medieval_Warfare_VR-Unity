@@ -25,27 +25,29 @@ MonoBehaviour:
       /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
       name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;trollSeen
-      != null&quot;&gt;&lt;detect sensor=&quot;&amp;quot;Proximity&amp;quot;&quot;
-      repeatuntil=&quot;running&quot; name=&quot;Check for proximity&quot; matchtype=&quot;best&quot;
-      entityobjectvariable=&quot;trollNear&quot; debugbreak=&quot;False&quot; consistent=&quot;False&quot;
-      aspectvariable=&quot;trollNearPosition&quot; aspectobjectvariable=&quot;&quot;
-      aspect=&quot;&amp;quot;Troll&amp;quot;&quot; /&gt;&lt;selector usepriorities=&quot;False&quot;
-      repeatuntil=&quot;&quot; name=&quot;selector&quot; debugbreak=&quot;False&quot;&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;trollNear == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate&quot;
-      debugbreak=&quot;False&quot; animationstate=&quot;run&quot; /&gt;&lt;sequencer
-      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;1&quot; repeatuntil=&quot;&quot;
-      priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;trollPosition&quot;
-      movespeed=&quot;2&quot; facetarget=&quot;trollPosition&quot; debugbreak=&quot;False&quot;
-      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
+      != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;Proximity&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;Check for proximity&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;trollNear&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;False&quot; aspectvariable=&quot;trollNearPosition&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Troll&amp;quot;&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;trollNear
+      == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
+      repeatuntil=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;run&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;2&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot;
+      movetarget=&quot;trollPosition&quot; movespeed=&quot;3&quot; facetarget=&quot;trollPosition&quot;
+      debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
+      /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
       constraint=&quot;trollNear != null&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;swordStrike2&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/constraint&gt;&lt;constraint
+      animationstate=&quot;swordStrike2&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
       constraint=&quot;trollSeen == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
