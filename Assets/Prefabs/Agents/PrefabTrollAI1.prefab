@@ -1785,8 +1785,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e159f88dd10c48dabe3c3e6648211a1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  agentEntity: {fileID: 1000014134464640}
+  lifePoints: 100
+  dead: 0
   agentEngine: {fileID: 1000012540844748}
+  agentEntityRig: {fileID: 0}
+  timeToNextAttack: 0
 --- !u!114 &114000012901323634
 MonoBehaviour:
   m_ObjectHideFlags: 1

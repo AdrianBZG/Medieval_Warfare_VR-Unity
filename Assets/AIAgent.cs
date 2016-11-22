@@ -3,19 +3,29 @@ using System.Collections;
 
 public class AIAgent : MonoBehaviour {
 
-	private int lifePoints = 100;
-	private bool dead = false;
-	public GameObject agentEntity = null;
+	public int lifePoints = 100;
+	public bool dead = false;
+	private bool canBeHitten = true;
 	public GameObject agentEngine = null;
+	public RAIN.Entities.EntityRig agentEntityRig = null;
+	public float timeToNextAttack = 0.0f;
 
 	// Use this for initialization
 	void Start () {
-	
+		this.lifePoints = 100;
+		dead = false;
+		canBeHitten = true;
+		timeToNextAttack = 0.0f;
+		agentEntityRig = GetComponentInChildren<RAIN.Entities.EntityRig>();
 	}
 	
 	// Update is called once per frame
 	void Update () {
-	
+		if (timeToNextAttack > 0) {
+			timeToNextAttack -= Time.deltaTime;
+		} else {
+			canBeHitten = true;
+		}
 	}
 
 	public int getLifePoints() {
@@ -27,22 +37,30 @@ public class AIAgent : MonoBehaviour {
 	}
 
 	private void checkDead() {
-		if (this.lifePoints < 0 && !dead) {
+		if (this.lifePoints < 0 && !isDead()) {
 			dead = true;
-			agentEntity.SetActive (false);
+			agentEntityRig.Entity.IsActive = false;
 			agentEngine.SetActive (false);
 			GetComponent<Animation>().Play ("die1", PlayMode.StopAll);
 		}
 	}
 
 	public void getDamage() {
-		this.lifePoints -= 20;
-		checkDead ();
+		if (canBeHitten) {
+			timeToNextAttack = 2.0f;
+			this.lifePoints -= 20;
+			checkDead ();
+			canBeHitten = false;
+		}
 	}
 
 	public void getDamage(int damage) {
-		this.lifePoints -= damage;
-		checkDead ();
+		if (canBeHitten) {
+			timeToNextAttack = 2.0f;
+			this.lifePoints -= damage;
+			checkDead ();
+			canBeHitten = false;
+		}
 	}
 		
 	public bool isDead() {

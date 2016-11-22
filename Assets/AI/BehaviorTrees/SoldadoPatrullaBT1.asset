@@ -44,10 +44,19 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;trollNear != null&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      constraint=&quot;trollNear != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
-      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
-      animationstate=&quot;swordStrike2&quot; /&gt;&lt;/sequencer&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;animate&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;swordStrike2&quot; /&gt;&lt;animate
+      repeatuntil=&quot;success&quot; priority=&quot;&quot; name=&quot;animate&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;swordStance&quot; /&gt;&lt;/sequencer&gt;&lt;action
+      repeatuntil=&quot;failure&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;(global)&quot; name=&quot;Do damage&quot; debugbreak=&quot;False&quot;
+      classname=&quot;DoDamageToDetectedAgent&quot; /&gt;&lt;timer waitforsec=&quot;2&quot;
+      returnvalue=&quot;success&quot; name=&quot;Wait 2s&quot; debugbreak=&quot;False&quot;
+      /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
       constraint=&quot;trollSeen == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
       succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
