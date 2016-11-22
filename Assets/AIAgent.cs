@@ -37,7 +37,7 @@ public class AIAgent : MonoBehaviour {
 	}
 
 	private void checkDead() {
-		if (this.lifePoints < 0 && !isDead()) {
+		if (this.lifePoints < 1 && !isDead()) {
 			dead = true;
 			agentEntityRig.Entity.IsActive = false;
 			agentEngine.SetActive (false);

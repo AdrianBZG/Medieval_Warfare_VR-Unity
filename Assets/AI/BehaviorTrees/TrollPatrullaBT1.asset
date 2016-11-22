@@ -28,12 +28,12 @@ MonoBehaviour:
       != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
       sensor=&quot;&amp;quot;Proximity&amp;quot;&quot; repeatuntil=&quot;running&quot;
-      name=&quot;Check for proximity&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;humanNear&quot;
+      name=&quot;Check for proximity&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;targetNear&quot;
       debugbreak=&quot;False&quot; consistent=&quot;False&quot; aspectvariable=&quot;humanNearPosition&quot;
       aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Human&amp;quot;&quot;
       /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
       debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
-      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;humanNear
+      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;targetNear
       == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
       repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
       repeatuntil=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
@@ -44,11 +44,13 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
-      constraint=&quot;humanNear != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
-      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
-      fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot;
-      name=&quot;animate&quot; debugbreak=&quot;False&quot; animationstate=&quot;attack2&quot;
-      /&gt;&lt;action repeatuntil=&quot;&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      constraint=&quot;targetNear != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
+      repeatuntil=&quot;running&quot; priority=&quot;&quot; name=&quot;animate&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;attack2&quot; /&gt;&lt;/sequencer&gt;&lt;action
+      repeatuntil=&quot;success&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
       namespace=&quot;&quot; name=&quot;Do damage&quot; debugbreak=&quot;False&quot;
       classname=&quot;DoDamageToDetectedAgent&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
       repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
