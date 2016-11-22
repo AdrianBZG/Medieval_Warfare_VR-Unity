@@ -23,9 +23,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
-#if !MOBILE_INPUT
+//#if !MOBILE_INPUT
             public bool m_Running;
-#endif
+//#endif
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
@@ -152,6 +152,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			anim.SetBool("run",movementSettings.m_Running);
             anim.SetFloat("speed", hor);
 			anim.SetBool("jump", m_Jumping);
+
+			if (Input.GetKeyDown(KeyCode.X)) {
+				anim.SetTrigger("attack");
+			}
 
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
