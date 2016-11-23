@@ -6,21 +6,27 @@ public class RotationWithCamera : MonoBehaviour {
 	public Transform cameraTrans;
 	// Use this for initialization
 
-	public Quaternion rot;
+	private float cameraHeight;
+	private Quaternion rot;
 
-	public Vector3 initialDistance;
-	public Vector3 initialPosPlayer;
+
+	public float initialDistance;
 
 	void Start () {
-		initialPosPlayer = transform.position;
-		initialDistance = cameraTrans.position - transform.position;
-		print(initialDistance);
+		Vector3 cameraPos = new Vector3 (cameraTrans.position.x, 0.0f, cameraTrans.position.z);
+		Vector3 myPos = new Vector3 (transform.position.x, 0.0f, transform.position.z);
+		cameraHeight = cameraTrans.position.y;
+		initialDistance = Vector3.Distance (cameraPos, myPos);
 	}
 		
 	
 	void LateUpdate () {
-		//rot.eulerAngles = new Vector3 (0, cameraTrans.rotation.eulerAngles.x, 0);
-		cameraTrans.position = transform.position + initialDistance;
+
+		print(transform.forward);
+		
+		cameraTrans.position = new Vector3(transform.position.x + transform.forward.x * initialDistance, 
+																	 cameraHeight, 
+																	 transform.position.z + transform.forward.z * initialDistance);
 
 		rot = new Quaternion(0,
 											 cameraTrans.rotation.y,

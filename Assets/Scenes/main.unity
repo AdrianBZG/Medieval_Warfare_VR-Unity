@@ -10490,9 +10490,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraTrans: {fileID: 1295764110}
-  rot: {x: 0, y: 0, z: 0, w: 0}
-  initialDistance: {x: 0, y: 0, z: 0}
-  initialPosPlayer: {x: 0, y: 0, z: 0}
+  initialDistance: 0
 --- !u!136 &1334223748
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10530,7 +10528,7 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1334223746}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 81c9795a96c094f4cbde4d65546aa9b2, type: 3}
   m_Name: 
