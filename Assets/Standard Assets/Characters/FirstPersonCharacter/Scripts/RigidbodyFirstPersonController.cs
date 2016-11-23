@@ -154,7 +154,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             anim.SetFloat("speed", hor);
 			anim.SetBool("jump", m_Jumping);
 
-			if (Input.GetKeyDown(KeyCode.X)) {
+			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X)) {
 				anim.SetTrigger("attack");
 			}
 
@@ -236,8 +236,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             Vector2 input = new Vector2
             {
-                x = Input.GetAxis("Horizontal"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
-                y = Input.GetAxis("Vertical")
+                x = Input.GetAxis("B_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
+                y = Input.GetAxis("Y_BluetoothController")
             };
 
             movementSettings.UpdateDesiredTargetSpeed(input);
