@@ -163,7 +163,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 			anim.SetBool("run",movementSettings.m_Running);
-            anim.SetFloat("speed", hor);
+			anim.SetFloat("speed", input.y);
 			anim.SetBool("jump", m_Jumping);
 
 			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X)) {
@@ -238,12 +238,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             }
         }
 
-        float hor;
 
         private Vector2 GetInput()
         {
-
-            hor = Input.GetAxis("Vertical");
 
 
             Vector2 input = new Vector2
