@@ -4,6 +4,7 @@ using System.Collections;
 public class RotationWithCamera : MonoBehaviour {
 
 	public Transform cameraTrans;
+	public float camHeightOffset;
 	// Use this for initialization
 
 	private float cameraHeight;
@@ -25,7 +26,7 @@ public class RotationWithCamera : MonoBehaviour {
 		print(transform.forward);
 		
 		cameraTrans.position = new Vector3(transform.position.x + transform.forward.x * initialDistance, 
-																	 cameraHeight, 
+																	 transform.position.y + camHeightOffset, 
 																	 transform.position.z + transform.forward.z * initialDistance);
 
 		rot = new Quaternion(0,
