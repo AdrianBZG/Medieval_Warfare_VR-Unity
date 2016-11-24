@@ -57,6 +57,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
 		            m_Running = false;
 	            }
 #endif
+
+#if MOBILE_INPUT
+				if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey(RunKey)) {
+					CurrentTargetSpeed *= RunMultiplier;
+					m_Running = true;
+				}
+				else
+				{
+					m_Running = false;
+				}
+#endif
             }
 
 #if !MOBILE_INPUT
@@ -141,6 +152,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             {
                 m_Jump = true;
             }
+
         }
 
 
