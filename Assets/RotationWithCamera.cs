@@ -22,8 +22,6 @@ public class RotationWithCamera : MonoBehaviour {
 		
 	
 	void LateUpdate () {
-
-		print(transform.forward);
 		
 		cameraTrans.position = new Vector3(transform.position.x + transform.forward.x * initialDistance, 
 																	 transform.position.y + camHeightOffset, 
