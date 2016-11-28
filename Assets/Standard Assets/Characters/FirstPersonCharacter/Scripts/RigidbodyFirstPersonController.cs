@@ -8,9 +8,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
-        public Animator anim;
-        //int idleHash = Animator.StringToHash("idle");
-
         [Serializable]
         public class MovementSettings
         {
@@ -23,9 +20,9 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
-//#if !MOBILE_INPUT
-            public bool m_Running;
-//#endif
+#if !MOBILE_INPUT
+            private bool m_Running;
+#endif
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
             {
@@ -56,17 +53,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 	            {
 		            m_Running = false;
 	            }
-#endif
-
-#if MOBILE_INPUT
-				if (Input.GetKeyDown(KeyCode.LeftShift) || Input.GetKey(RunKey)) {
-					CurrentTargetSpeed *= RunMultiplier;
-					m_Running = true;
-				}
-				else
-				{
-					m_Running = false;
-				}
 #endif
             }
 
@@ -137,22 +123,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
             m_RigidBody = GetComponent<Rigidbody>();
             m_Capsule = GetComponent<CapsuleCollider>();
             mouseLook.Init (transform, cam.transform);
-
-
-
         }
 
 
         private void Update()
         {
-			// RUDY: desactivbo este método porque de esto se ocupa el script RotationWithCamera
-            //RotateView();
+            RotateView();
 
             if (CrossPlatformInputManager.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
             }
-
         }
 
 
@@ -161,19 +142,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GroundCheck();
             Vector2 input = GetInput();
 
-
-			anim.SetBool("run",movementSettings.m_Running);
-			anim.SetFloat("speed", input.y);
-			anim.SetBool("jump", m_Jumping);
-
-			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X)) {
-				anim.SetTrigger("attack");
-			}
-
-
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
-                //anim.SetTrigger(idleHash);
                 // always move along the camera forward as it is the direction that it being aimed at
                 Vector3 desiredMove = cam.transform.forward*input.y + cam.transform.right*input.x;
                 desiredMove = Vector3.ProjectOnPlane(desiredMove, m_GroundContactNormal).normalized;
@@ -243,18 +213,17 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
 
 
+
             Vector2 input = new Vector2
             {
-                x = Input.GetAxis("B_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
-                y = Input.GetAxis("Y_BluetoothController")
+                x = Input.GetAxis("A_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
+                y = Input.GetAxis("X_BluetoothController")
             };
-
-            movementSettings.UpdateDesiredTargetSpeed(input);
+			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
         }
 
 
-		/*
         private void RotateView()
         {
             //avoids the mouse looking if the game is effectively paused
@@ -272,7 +241,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_RigidBody.velocity = velRotation*m_RigidBody.velocity;
             }
         }
-        */
 
         /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()

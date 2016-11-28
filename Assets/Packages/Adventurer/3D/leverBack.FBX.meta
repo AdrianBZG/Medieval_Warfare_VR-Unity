@@ -3,8 +3,20 @@ guid: 8f47ade78cbd1d24093100fd258950eb
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: lever
+    100002: //RootNode
+    100004: leverBase
+    400000: lever
+    400002: //RootNode
+    400004: leverBase
+    2300000: lever
+    2300002: leverBase
+    3300000: lever
+    3300002: leverBase
     4300000: leverBase
     4300002: lever
+    7400000: leverPullBack
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

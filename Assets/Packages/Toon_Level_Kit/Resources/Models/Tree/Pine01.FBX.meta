@@ -3,9 +3,21 @@ guid: 9301a8570b21e487583c83dc93a146d3
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: LeafPine
+    100002: //RootNode
+    100004: Pine01
+    400000: LeafPine
+    400002: //RootNode
+    400004: Pine01
+    2300000: LeafPine
+    2300002: Pine01
+    3300000: LeafPine
+    3300002: Pine01
     4300000: Tree01
     4300002: LeafPine
     4300004: Pine01
+    7400000: Take 001
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

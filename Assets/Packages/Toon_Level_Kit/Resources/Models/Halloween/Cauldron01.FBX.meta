@@ -3,8 +3,13 @@ guid: f1aa23844d6c74c00a37d58a5eadd98b
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Cauldron
     4300002: Cauldron01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0

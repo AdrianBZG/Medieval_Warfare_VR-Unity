@@ -106,7 +106,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             angleX = Mathf.Clamp (angleX, MinimumX, MaximumX);
 
-
             q.x = Mathf.Tan (0.5f * Mathf.Deg2Rad * angleX);
 
             return q;

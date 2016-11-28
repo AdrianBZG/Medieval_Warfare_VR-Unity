@@ -3,10 +3,20 @@ guid: b1ff3a3053001184dad332fbd8e1cfb7
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    100002: treasureChestTop
+    400000: //RootNode
+    400002: treasureChestTop
+    2300000: //RootNode
+    2300002: treasureChestTop
+    3300000: //RootNode
+    3300002: treasureChestTop
     4300000: chest_low_3
     4300002: chest_low_01
     4300004: treasureChest
     4300006: treasureChestTop
+    7400000: open
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 3

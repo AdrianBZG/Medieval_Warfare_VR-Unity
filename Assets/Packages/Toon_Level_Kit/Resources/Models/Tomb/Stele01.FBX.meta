@@ -3,8 +3,13 @@ guid: 577843fbda66a460799a1402f7bed5ed
 ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
     4300000: Tomb_Stone_H
     4300002: Stele01
+    11100000: //RootNode
   materials:
     importMaterials: 1
     materialName: 0
