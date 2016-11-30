@@ -211,9 +211,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         private Vector2 GetInput()
         {
-
-
-
             Vector2 input = new Vector2
             {
                 x = Input.GetAxis("X_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
@@ -224,6 +221,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
+		// DONT USE -- RUDY
+		/*
         private void RotateView()
         {
             //avoids the mouse looking if the game is effectively paused
@@ -241,6 +240,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 m_RigidBody.velocity = velRotation*m_RigidBody.velocity;
             }
         }
+        */
 
         /// sphere cast down just beyond the bottom of the capsule to see if the capsule is colliding round the bottom
         private void GroundCheck()
