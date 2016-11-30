@@ -151,9 +151,15 @@ namespace UnityStandardAssets.Characters.FirstPerson
             GroundCheck();
             Vector2 input = GetInput();
 
+
+
 			anim.SetFloat("speed",input.y);
 			anim.SetBool("jump",m_Jump);
 			anim.SetBool("run",movementSettings.m_Running);
+
+			if (input.y != 0)
+				anim.SetTrigger("walk");
+				
 
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
