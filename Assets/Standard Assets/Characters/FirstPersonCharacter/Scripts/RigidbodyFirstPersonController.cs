@@ -8,6 +8,10 @@ namespace UnityStandardAssets.Characters.FirstPerson
     [RequireComponent(typeof (CapsuleCollider))]
     public class RigidbodyFirstPersonController : MonoBehaviour
     {
+
+
+		public Animator anim;
+
         [Serializable]
         public class MovementSettings
         {
@@ -20,8 +24,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             public AnimationCurve SlopeCurveModifier = new AnimationCurve(new Keyframe(-90.0f, 1.0f), new Keyframe(0.0f, 1.0f), new Keyframe(90.0f, 0.0f));
             [HideInInspector] public float CurrentTargetSpeed = 8f;
 
-#if !MOBILE_INPUT
-            private bool m_Running;
+#if MOBILE_INPUT
+            public bool m_Running;
 #endif
 
             public void UpdateDesiredTargetSpeed(Vector2 input)
@@ -43,7 +47,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 					//handled last as if strafing and moving forward at the same time forwards speed should take precedence
 					CurrentTargetSpeed = ForwardSpeed;
 				}
-#if !MOBILE_INPUT
+#if MOBILE_INPUT
 	            if (Input.GetKey(RunKey))
 	            {
 		            CurrentTargetSpeed *= RunMultiplier;
@@ -56,7 +60,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 #endif
             }
 
-#if !MOBILE_INPUT
+#if MOBILE_INPUT
             public bool Running
             {
                 get { return m_Running; }
@@ -109,7 +113,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             get
             {
- #if !MOBILE_INPUT
+ #if MOBILE_INPUT
 				return movementSettings.Running;
 #else
 	            return false;
@@ -130,6 +134,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //RotateView();
 
+			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X)) {
+				anim.SetTrigger("attack");
+			}
+				
+
             if (Input.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
@@ -141,6 +150,11 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             GroundCheck();
             Vector2 input = GetInput();
+
+			anim.SetFloat("speed",input.y);
+			anim.SetBool("jump",m_Jump);
+			anim.SetBool("run",movementSettings.m_Running);
+
 
             if ((Mathf.Abs(input.x) > float.Epsilon || Mathf.Abs(input.y) > float.Epsilon) && (advancedSettings.airControl || m_IsGrounded))
             {
@@ -164,6 +178,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
                 if (m_Jump)
                 {
+					
                     m_RigidBody.drag = 0f;
                     m_RigidBody.velocity = new Vector3(m_RigidBody.velocity.x, 0f, m_RigidBody.velocity.z);
                     m_RigidBody.AddForce(new Vector3(0f, movementSettings.JumpForce, 0f), ForceMode.Impulse);
