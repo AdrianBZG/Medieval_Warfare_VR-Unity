@@ -1,14 +1,2 @@
 Base path: C:/Program Files/Unity/Editor/Data
 Cmd: getPlatforms
-Cmd: preprocess
-  insize=8124 outsize=1304 ok=1
-Cmd: compileSnippet
-  error: 2 plat 4 at (98): 'LightingLambert': cannot implicitly convert from 'half3' to 'struct UnityGI'\nCompiling Vertex program with DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING
-  api=4 type=0 insize=3712 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=0
-Cmd: preprocess
-  insize=8124 outsize=1304 ok=1
-Cmd: compileSnippet
-  error: 2 plat 4 at (98): 'LightingLambert': cannot implicitly convert from 'half3' to 'struct UnityGI'\nCompiling Vertex program with DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF
-Platform defines: UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING
-  api=4 type=0 insize=3712 outsize=0 kw=DIRECTIONAL LIGHTMAP_OFF DYNAMICLIGHTMAP_OFF pd=UNITY_ENABLE_REFLECTION_BUFFERS UNITY_PBS_USE_BRDF1 UNITY_SPECCUBE_BOX_PROJECTION UNITY_SPECCUBE_BLENDING ok=0
