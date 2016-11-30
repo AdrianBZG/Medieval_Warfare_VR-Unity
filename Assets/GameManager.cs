@@ -3,9 +3,20 @@ using System.Collections;
 
 public class GameManager : MonoBehaviour {
 
+
+
+
+
+	// public GameObjects
 	public GameObject player;
 	public GameObject campFire;
+
+
+	// public values for comparisons bassically
 	public float campFireDistanceOffset;
+
+
+	// Private assets
 	private CampfireManager campfireManager;
 
 
@@ -24,4 +35,6 @@ public class GameManager : MonoBehaviour {
 			}
 		}
 	}
+
+	
 }
