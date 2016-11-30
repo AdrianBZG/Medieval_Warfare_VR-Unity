@@ -216,8 +216,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
             Vector2 input = new Vector2
             {
-                x = Input.GetAxis("A_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
-                y = Input.GetAxis("X_BluetoothController")
+                x = Input.GetAxis("X_BluetoothController"),//CrossPlatformInputManager.GetAxis("A_BluetoothController"),
+                y = Input.GetAxis("A_BluetoothController")
             };
 			movementSettings.UpdateDesiredTargetSpeed(input);
             return input;
