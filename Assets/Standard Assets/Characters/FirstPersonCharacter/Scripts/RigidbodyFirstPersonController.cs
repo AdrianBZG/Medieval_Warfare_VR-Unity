@@ -134,7 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
         {
             //RotateView();
 
-			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X)) {
+			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X) || Input.GetTouch(0)) {
 				anim.SetTrigger("attack");
 			}
 				
