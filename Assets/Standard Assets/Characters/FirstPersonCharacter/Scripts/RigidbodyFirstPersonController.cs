@@ -11,7 +11,6 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
 		public Animator anim;
-        private bool walking = false;
         public MonoBehaviour audioManager;
         
         
@@ -161,19 +160,25 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			anim.SetBool("jump",m_Jump);
 			anim.SetBool("run",movementSettings.m_Running);
 
+            if (movementSettings.m_Running)
+            {
+                audioManager.Invoke("Run", 0.0f);
+            }
+            else
+            {
+                audioManager.Invoke("StopRunning", 0.0f);
+            }
+
+
             if (input.y != 0)
             {
                 anim.SetTrigger("walk");
-                if (!walking)
-                {
-                    audioManager.Invoke("Walk", 0.0f);
-                    walking = true;
-                }
+                audioManager.Invoke("Walk", 0.0f);
             }
-            else if (walking)
+            else
             {
                 audioManager.Invoke("StopWalking", 0.0f);
-                walking = false;
+                
             }
 				
 

@@ -2,45 +2,65 @@
 using System.Collections;
 
 
-    public class PlayerAudioManager : MonoBehaviour
-    {
+public class PlayerAudioManager : MonoBehaviour
+{
     
-        public GvrAudioSource walkAudio;
-        public GvrAudioSource runAudio;
-        public GvrAudioSource swordAudio;
-        // Use this for initialization
-        void Start()
-        {
-        }
+    public GvrAudioSource walkAudio;
+    public GvrAudioSource runAudio;
+    public GvrAudioSource swordAudio;
 
-        public void Walk()
-        {
 
+    private bool isWalking = false;
+    private bool isRunning = false;
+
+    
+    public bool IsWalking ()
+    {
+        return isWalking;
+    }
+
+    public bool IsRunning ()
+    {
+        return isRunning;
+    }
+
+    public void Walk()
+    {
+        if (!isWalking)
+        {
+            isWalking = true;
             walkAudio.Play();
         }
+    }
 
-        public void Run()
+    public void Run()
+    {
+        if (!isRunning)
         {
+            isRunning = true;
             runAudio.Play();
-        }
-
-        public void Sword()
-        {
-            swordAudio.Play();
-        }
-
-        public void StopWalking()
-        {
-            walkAudio.Stop();
-        }
-
-        public void StopRunning()
-        {
-            runAudio.Play();
-        }
-
-        public void StopSword()
-        {
-            swordAudio.Stop();
         }
     }
+
+    public void Sword()
+    {
+        swordAudio.Play();
+    }
+
+    public void StopWalking()
+    {
+        isWalking = false;
+        walkAudio.Stop();
+    }
+
+    public void StopRunning()
+    {
+        isRunning = false;
+        runAudio.Stop();
+    }
+
+    public void StopSword()
+    {
+        swordAudio.Stop();
+    }
+}
