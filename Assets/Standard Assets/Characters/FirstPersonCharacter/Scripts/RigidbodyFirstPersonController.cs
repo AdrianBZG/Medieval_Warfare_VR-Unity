@@ -134,6 +134,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 
         bool wantAttack = false;
+        bool canAttack = true;
 
         private void Update()
         {
@@ -142,7 +143,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
 				anim.SetTrigger("attack");
                 wantAttack = true;
-                
+
 			}
 				
             
@@ -155,11 +156,18 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
         void CheckAttack ()
         {
-            if (wantAttack)
+            if (wantAttack && canAttack)
             {
+                canAttack = false;
+                Invoke("EnableAttack", 1.0f);
                 audioManager.Invoke("Sword", 0.5f);
                 wantAttack = false;
             }
+        }
+
+        void EnableAttack ()
+        {
+            canAttack = true;
         }
 
 

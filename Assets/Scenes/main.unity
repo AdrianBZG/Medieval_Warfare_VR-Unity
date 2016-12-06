@@ -611,6 +611,10 @@ Prefab:
       propertyPath: m_Name
       value: Wall (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
   m_IsPrefabParent: 0
@@ -3953,6 +3957,10 @@ Prefab:
       propertyPath: m_LocalScale.z
       value: 74.33296
       objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
   m_IsPrefabParent: 0
@@ -5094,6 +5102,11 @@ Prefab:
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1034107943}
+    - target: {fileID: 64000012693678006, guid: 95ccc379853b0cb429d33e78ca350478,
+        type: 2}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 95ccc379853b0cb429d33e78ca350478, type: 2}
   m_IsPrefabParent: 0
@@ -5163,6 +5176,10 @@ Prefab:
     - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
       propertyPath: m_LocalScale.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
@@ -6386,6 +6403,46 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155260, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155262, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010627357226, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000010382252516, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155258, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155256, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155254, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155252, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
+    - target: {fileID: 155250, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
   m_IsPrefabParent: 0
@@ -7437,6 +7494,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
   m_IsPrefabParent: 0
@@ -7932,29 +7993,9 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
       propertyPath: m_Name
       value: Wall (2)
-      objectReference: {fileID: 0}
-    - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
-      propertyPath: m_LocalScale.x
-      value: 74.33293
-      objectReference: {fileID: 0}
-    - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
-      propertyPath: m_LocalScale.y
-      value: 100
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
@@ -12633,7 +12674,7 @@ GameObject:
   - 4: {fileID: 1428756198}
   m_Layer: 0
   m_Name: Walls
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13258,7 +13299,7 @@ GameObject:
   - 4: {fileID: 1524552642}
   m_Layer: 0
   m_Name: Techo (1)
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -13283,6 +13324,51 @@ Light:
   m_PrefabParentObject: {fileID: 10865384, guid: aea0bdc7bd20cc84f83480f4d292f1b9,
     type: 2}
   m_PrefabInternal: {fileID: 1721145322}
+--- !u!1 &1538153411 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000013878289666, guid: 95ccc379853b0cb429d33e78ca350478,
+    type: 2}
+  m_PrefabInternal: {fileID: 567142304}
+--- !u!114 &1538153413
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538153411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 085a5a052c04c3445a393451e786db06, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+--- !u!114 &1538153414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538153411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 23eccbb3ef584d14e813305f87090288, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackSound: {fileID: 1538153413}
 --- !u!1001 &1554880650
 Prefab:
   m_ObjectHideFlags: 0
@@ -13772,6 +13858,10 @@ Prefab:
     - target: {fileID: 455270, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
       propertyPath: m_LocalScale.y
       value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
@@ -15089,6 +15179,10 @@ Prefab:
       propertyPath: m_LocalScale.y
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 155248, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
+      propertyPath: m_TagString
+      value: Obstacle
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a5eda22969ef34c883fa5064ef555a, type: 2}
   m_IsPrefabParent: 0
@@ -15387,7 +15481,7 @@ GameObject:
   - 4: {fileID: 1860207507}
   m_Layer: 0
   m_Name: Techo
-  m_TagString: Untagged
+  m_TagString: Obstacle
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -17995,6 +18089,10 @@ Prefab:
         type: 2}
       propertyPath: _dataSerializer._serializedCustomData.Array.size
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
