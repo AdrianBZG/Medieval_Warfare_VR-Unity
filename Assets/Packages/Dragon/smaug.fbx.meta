@@ -6,10 +6,290 @@ ModelImporter:
   serializedVersion: 19
   fileIDToRecycleName:
     100000: //RootNode
+    100002: ass
+    100004: ass_end
+    100006: back
+    100008: back.001
+    100010: back.002
+    100012: body
+    100014: Camera
+    100016: control
+    100018: control 1
+    100020: eye down l
+    100022: eye down l_end
+    100024: eye down r
+    100026: eye down r_end
+    100028: eye l
+    100030: eye l_end
+    100032: eye r
+    100034: eye r_end
+    100036: eye up l
+    100038: eye up l_end
+    100040: eye up r
+    100042: eye up r_end
+    100044: foot IK l
+    100046: foot IK l_end
+    100048: foot IK r
+    100050: foot IK r_end
+    100052: foot l
+    100054: foot r
+    100056: head
+    100058: head IK
+    100060: hemi
+    100062: hip IK
+    100064: jaw
+    100066: join
+    100068: leg down l
+    100070: leg down r
+    100072: leg up l
+    100074: leg up r
+    100076: mouth 1 l
+    100078: mouth 1 l_end
+    100080: mouth 1 r
+    100082: mouth 1 r_end
+    100084: mouth 2 l
+    100086: mouth 2 l_end
+    100088: mouth 2 r
+    100090: mouth 2 r_end
+    100092: neck
+    100094: neck IK
+    100096: neck.001
+    100098: neck.002
+    100100: neck.003
+    100102: neck.004
+    100104: neck.004_end
+    100106: Plane
+    100108: s-skeleton
+    100110: smaug
+    100112: stomach
+    100114: stomach_end
+    100116: sun
+    100118: tail
+    100120: tail IK
+    100122: tail IK_end
+    100124: tail.001
+    100126: tail.002
+    100128: tail.003
+    100130: tail.004
+    100132: tail.005
+    100134: tail.006
+    100136: tail.007
+    100138: tail.008
+    100140: tail.009
+    100142: tail.010
+    100144: tail.011
+    100146: tail.012
+    100148: tail.013
+    100150: tail.014
+    100152: tail.015
+    100154: tail.016
+    100156: tail.016_end
+    100158: toe 1 l
+    100160: toe 1 l_end
+    100162: toe 1 r
+    100164: toe 1 r_end
+    100166: toe 2 l
+    100168: toe 2 l_end
+    100170: toe 2 r
+    100172: toe 2 r_end
+    100174: toe 3 l
+    100176: toe 3 l_end
+    100178: toe 3 r
+    100180: toe 3 r_end
+    100182: toe 4 l
+    100184: toe 4 l_end
+    100186: toe 4 r
+    100188: toe 4 r_end
+    100190: tongue
+    100192: tongue.001
+    100194: tongue.002
+    100196: tongue.003
+    100198: tongue.004
+    100200: tongue.004_end
+    100202: wing 1 l
+    100204: wing 1 r
+    100206: wing 2 l
+    100208: wing 2 l.001
+    100210: wing 2 l.002
+    100212: wing 2 l.003
+    100214: wing 2 l.003_end
+    100216: wing 2 r
+    100218: wing 2 r.001
+    100220: wing 2 r.002
+    100222: wing 2 r.003
+    100224: wing 2 r.003_end
+    100226: wing 3 l
+    100228: wing 3 l_end
+    100230: wing 3 r
+    100232: wing 3 r_end
+    100234: wing 4 l
+    100236: wing 4 l_end
+    100238: wing 4 r
+    100240: wing 4 r_end
+    100242: wing 6 l
+    100244: wing 6 l_end
+    100246: wing 6 r
+    100248: wing 6 r_end
+    100250: wing down l
+    100252: wing down r
+    100254: wing IK l
+    100256: wing IK l_end
+    100258: wing IK r
+    100260: wing IK r_end
+    100262: wing up l
+    100264: wing up r
     400000: //RootNode
+    400002: ass
+    400004: ass_end
+    400006: back
+    400008: back.001
+    400010: back.002
+    400012: body
+    400014: Camera
+    400016: control
+    400018: control 1
+    400020: eye down l
+    400022: eye down l_end
+    400024: eye down r
+    400026: eye down r_end
+    400028: eye l
+    400030: eye l_end
+    400032: eye r
+    400034: eye r_end
+    400036: eye up l
+    400038: eye up l_end
+    400040: eye up r
+    400042: eye up r_end
+    400044: foot IK l
+    400046: foot IK l_end
+    400048: foot IK r
+    400050: foot IK r_end
+    400052: foot l
+    400054: foot r
+    400056: head
+    400058: head IK
+    400060: hemi
+    400062: hip IK
+    400064: jaw
+    400066: join
+    400068: leg down l
+    400070: leg down r
+    400072: leg up l
+    400074: leg up r
+    400076: mouth 1 l
+    400078: mouth 1 l_end
+    400080: mouth 1 r
+    400082: mouth 1 r_end
+    400084: mouth 2 l
+    400086: mouth 2 l_end
+    400088: mouth 2 r
+    400090: mouth 2 r_end
+    400092: neck
+    400094: neck IK
+    400096: neck.001
+    400098: neck.002
+    400100: neck.003
+    400102: neck.004
+    400104: neck.004_end
+    400106: Plane
+    400108: s-skeleton
+    400110: smaug
+    400112: stomach
+    400114: stomach_end
+    400116: sun
+    400118: tail
+    400120: tail IK
+    400122: tail IK_end
+    400124: tail.001
+    400126: tail.002
+    400128: tail.003
+    400130: tail.004
+    400132: tail.005
+    400134: tail.006
+    400136: tail.007
+    400138: tail.008
+    400140: tail.009
+    400142: tail.010
+    400144: tail.011
+    400146: tail.012
+    400148: tail.013
+    400150: tail.014
+    400152: tail.015
+    400154: tail.016
+    400156: tail.016_end
+    400158: toe 1 l
+    400160: toe 1 l_end
+    400162: toe 1 r
+    400164: toe 1 r_end
+    400166: toe 2 l
+    400168: toe 2 l_end
+    400170: toe 2 r
+    400172: toe 2 r_end
+    400174: toe 3 l
+    400176: toe 3 l_end
+    400178: toe 3 r
+    400180: toe 3 r_end
+    400182: toe 4 l
+    400184: toe 4 l_end
+    400186: toe 4 r
+    400188: toe 4 r_end
+    400190: tongue
+    400192: tongue.001
+    400194: tongue.002
+    400196: tongue.003
+    400198: tongue.004
+    400200: tongue.004_end
+    400202: wing 1 l
+    400204: wing 1 r
+    400206: wing 2 l
+    400208: wing 2 l.001
+    400210: wing 2 l.002
+    400212: wing 2 l.003
+    400214: wing 2 l.003_end
+    400216: wing 2 r
+    400218: wing 2 r.001
+    400220: wing 2 r.002
+    400222: wing 2 r.003
+    400224: wing 2 r.003_end
+    400226: wing 3 l
+    400228: wing 3 l_end
+    400230: wing 3 r
+    400232: wing 3 r_end
+    400234: wing 4 l
+    400236: wing 4 l_end
+    400238: wing 4 r
+    400240: wing 4 r_end
+    400242: wing 6 l
+    400244: wing 6 l_end
+    400246: wing 6 r
+    400248: wing 6 r_end
+    400250: wing down l
+    400252: wing down r
+    400254: wing IK l
+    400256: wing IK l_end
+    400258: wing IK r
+    400260: wing IK r_end
+    400262: wing up l
+    400264: wing up r
     2300000: //RootNode
+    2300002: body
+    2300004: control
+    2300006: join
+    2300008: Plane
+    2300010: smaug
     3300000: //RootNode
+    3300002: body
+    3300004: control
+    3300006: join
+    3300008: Plane
+    3300010: smaug
     4300000: smaug
+    4300002: join
+    4300004: control
+    4300006: Plane
+    4300008: body
+    9500000: //RootNode
+    13700000: smaug
   materials:
     importMaterials: 1
     materialName: 0
@@ -24,7 +304,7 @@ ModelImporter:
     animationImportWarnings: 
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
-    animationCompression: 1
+    animationCompression: 3
     animationRotationError: 0.5
     animationPositionError: 0.5
     animationScaleError: 0.5
@@ -50,9 +330,9 @@ ModelImporter:
     secondaryUVPackMargin: 4
     useFileScale: 1
   tangentSpace:
-    normalSmoothAngle: 60
+    normalSmoothAngle: 180
     normalImportMode: 0
-    tangentImportMode: 3
+    tangentImportMode: 0
   importAnimation: 1
   copyAvatar: 0
   humanDescription:
@@ -68,7 +348,7 @@ ModelImporter:
     rootMotionBoneName: 
     hasTranslationDoF: 0
   lastHumanDescriptionAvatarSource: {instanceID: 0}
-  animationType: 0
+  animationType: 2
   humanoidOversampling: 1
   additionalBone: 0
   userData: 
