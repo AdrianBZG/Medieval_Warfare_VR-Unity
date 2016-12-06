@@ -8541,7 +8541,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   walkAudio: {fileID: 1034107944}
   runAudio: {fileID: 1034107945}
-  swordAudio: {fileID: 0}
+  swordAudio: {fileID: 1034107946}
 --- !u!114 &1034107944
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8591,6 +8591,34 @@ MonoBehaviour:
   spread: 0
   sourceClip: {fileID: 8300000, guid: ef67e85760c91da4e836ac6272f9e9a1, type: 3}
   sourceLoop: 1
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+--- !u!114 &1034107946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1034107942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 9.95
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: c4bbea361529df3469a0c680b405cea9, type: 3}
+  sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
   sourcePriority: 128

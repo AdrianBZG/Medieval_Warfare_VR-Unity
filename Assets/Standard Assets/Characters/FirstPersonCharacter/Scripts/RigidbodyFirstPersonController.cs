@@ -133,18 +133,32 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
+        bool wantAttack = false;
+
         private void Update()
         {
             //RotateView();
 
 			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
 				anim.SetTrigger("attack");
+                wantAttack = true;
+                
 			}
 				
+            
 
             if (Input.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
+            }
+        }
+
+        void CheckAttack ()
+        {
+            if (wantAttack)
+            {
+                audioManager.Invoke("Sword", 0.5f);
+                wantAttack = false;
             }
         }
 
@@ -167,6 +181,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 audioManager.Invoke("StopRunning", 0.0f);
+                CheckAttack();
             }
 
 
@@ -178,7 +193,8 @@ namespace UnityStandardAssets.Characters.FirstPerson
             else
             {
                 audioManager.Invoke("StopWalking", 0.0f);
-                
+                CheckAttack();
+
             }
 				
 
