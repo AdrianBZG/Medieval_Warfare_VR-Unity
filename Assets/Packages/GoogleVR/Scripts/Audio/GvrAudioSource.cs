@@ -19,7 +19,10 @@ using System.Collections;
 /// GVR audio source component that enhances AudioSource to provide advanced spatial audio features.
 [AddComponentMenu("GoogleVR/Audio/GvrAudioSource")]
 public class GvrAudioSource : MonoBehaviour {
-  /// Denotes whether the room effects should be bypassed.
+    /// Denotes whether the room effects should be bypassed.
+    /// 
+    public AudioMixer mixer;
+
   public bool bypassRoomEffects = false;
 
   /// Directivity pattern shaping factor.
@@ -213,10 +216,14 @@ public class GvrAudioSource : MonoBehaviour {
     audioSource.bypassReverbZones = true;
     audioSource.spatialBlend = 0.0f;
     OnValidate();
-    // Route the source output to |GvrAudioMixer|.
-    AudioMixer mixer = (Resources.Load("GvrAudioMixer") as AudioMixer);
-    if(mixer != null) {
-      audioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("Master")[0];
+        // Route the source output to |GvrAudioMixer|.
+
+
+        AudioMixer mixer = (Resources.Load("GvrAudioMixer") as AudioMixer);
+        //print("Mixer: ");
+      //  audioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("Master")[0];
+        if (mixer != null) {
+        audioSource.outputAudioMixerGroup = mixer.FindMatchingGroups("Master")[0];
     } else {
       Debug.LogError("GVRAudioMixer could not be found in Resources. Make sure that the GVR SDK" +
                      "Unity package is imported properly.");

@@ -1,10 +1,12 @@
 fileFormatVersion: 2
 guid: 6dbca64e524ea44f9b26142ec59aca8a
-timeCreated: 1447961362
-licenseType: Pro
+timeCreated: 1481046533
+licenseType: Free
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  - sourceClip: {fileID: 8300000, guid: a8b6a0f6a9d97af41bc2bb236313309d, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
