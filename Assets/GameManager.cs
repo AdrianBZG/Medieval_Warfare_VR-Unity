@@ -5,6 +5,7 @@ public class GameManager : MonoBehaviour {
 
 
 
+    public GameObject menu;
 
 
 	// public GameObjects
@@ -34,12 +35,29 @@ public class GameManager : MonoBehaviour {
 				campfireManager.Switch();
 			}
 		}
+
+        if (Input.GetKeyDown(KeyCode.Return))
+        {
+            ShowMenu();
+        }
 	}
 
-
-    public void PlaySwordAirAttackSound()
+    
+    public void ShowMenu ()
     {
+        PauseGame();
+        menu.SetActive(true);
+    }
 
+    public void PauseGame ()
+    {
+        Time.timeScale = 0.0f;
+    }
+
+    public void RestoreGame ()
+    {
+        Time.timeScale = 1.0f;
+        menu.SetActive(false);
     }
 
 
