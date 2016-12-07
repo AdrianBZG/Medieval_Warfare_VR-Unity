@@ -17256,6 +17256,23 @@ Transform:
   - {fileID: 973702557}
   m_Father: {fileID: 155136817}
   m_RootOrder: 1
+--- !u!1 &1826467370 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000010799654524, guid: 95ccc379853b0cb429d33e78ca350478,
+    type: 2}
+  m_PrefabInternal: {fileID: 567142304}
+--- !u!114 &1826467372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1826467370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 136b2f6d7ea700c44b0116663ad40834, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialHealth: 100
 --- !u!1001 &1843289167
 Prefab:
   m_ObjectHideFlags: 0
@@ -18057,6 +18074,10 @@ Prefab:
         type: 2}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000011141155332, guid: 4783eeab91ca9384ba4cdf1d95eca799, type: 2}
+      propertyPath: m_Name
+      value: Menu
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4783eeab91ca9384ba4cdf1d95eca799, type: 2}
@@ -20016,7 +20037,7 @@ GameObject:
   - 114: {fileID: 2088868251}
   m_Layer: 0
   m_Name: GameManager
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -20035,7 +20056,7 @@ MonoBehaviour:
   menu: {fileID: 21981800}
   player: {fileID: 1034107942}
   campFire: {fileID: 1724290209}
-  campFireDistanceOffset: 5
+  campDistEvent: 0
 --- !u!4 &2088868250
 Transform:
   m_ObjectHideFlags: 0

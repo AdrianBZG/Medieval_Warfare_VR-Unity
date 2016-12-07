@@ -1,29 +1,24 @@
 ﻿using UnityEngine;
-using System.Collections;
-using UnityEngine.Audio;
 public class GameManager : MonoBehaviour {
 
+    public delegate void MyDelegate();
+    public static MyDelegate myDelegate;
 
 
     public GameObject menu;
-
-    public GvrAudioListener listener;
-
-
+    
 	// public GameObjects
 	public GameObject player;
 	public GameObject campFire;
 
 
 	// public values for comparisons bassically
-	public float campFireDistanceOffset;
+    // this variable contains the maximum distance where the player can interact with the campFire 
+	public float campDistEvent;
 
 
 	// Private assets
 	private CampfireManager campfireManager;
-
-
-
 
 	// Use this for initialization
 	void Start () {
@@ -32,7 +27,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Vector3.Distance(player.transform.position, campFire.transform.position) < campFireDistanceOffset) {
+		if (Vector3.Distance(player.transform.position, campFire.transform.position) < campDistEvent) {
 			if (Input.GetKeyDown(KeyCode.LeftShift)) {
 				campfireManager.Switch();
 			}
@@ -42,8 +37,9 @@ public class GameManager : MonoBehaviour {
         {
             ShowMenu();
         }
+        if (myDelegate != null)
+            myDelegate();
 	}
-
     
     public void ShowMenu ()
     {
@@ -69,6 +65,12 @@ public class GameManager : MonoBehaviour {
         {
             source.UnPause();
         }
+    }
+
+    public static void EndGame ()
+    {
+        print("End game");
+        Application.Quit();
     }
 
 

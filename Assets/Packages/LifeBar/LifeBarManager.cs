@@ -40,7 +40,8 @@ public class LifeBarManager : MonoBehaviour {
 		lifePoints -= damage;
 		if (lifePoints < 0)  {
 			dead = true;
-			lifePoints = 0;
+            GameManager.myDelegate += Dead;
+            lifePoints = 0;
 		}
 	}
 
@@ -52,8 +53,12 @@ public class LifeBarManager : MonoBehaviour {
 		dead = false;
 		lifePoints = maxLifePoints;
 	}
+    void Dead()
+    {
+        GameManager.EndGame();
+    }
 
-	public void SetGreenBarWidth () {
+    public void SetGreenBarWidth () {
 
 		if (!IsDead()) {
 
