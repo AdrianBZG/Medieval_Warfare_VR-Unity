@@ -1,11 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using UnityEngine.Audio;
 public class GameManager : MonoBehaviour {
 
 
 
     public GameObject menu;
+
+    public GvrAudioListener listener;
 
 
 	// public GameObjects
@@ -52,12 +54,21 @@ public class GameManager : MonoBehaviour {
     public void PauseGame ()
     {
         Time.timeScale = 0.0f;
+        foreach (GvrAudioSource source in GameObject.FindObjectsOfType<GvrAudioSource>())
+        {
+            source.Pause();
+        }
+        
     }
 
     public void RestoreGame ()
     {
         Time.timeScale = 1.0f;
         menu.SetActive(false);
+        foreach (GvrAudioSource source in GameObject.FindObjectsOfType<GvrAudioSource>())
+        {
+            source.UnPause();
+        }
     }
 
 

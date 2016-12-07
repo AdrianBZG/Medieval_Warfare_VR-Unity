@@ -353,6 +353,11 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4267dc786b4b3ff4d8f1b97a33933263, type: 3}
   m_IsPrefabParent: 0
+--- !u!1 &21981800 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1000011141155332, guid: 4783eeab91ca9384ba4cdf1d95eca799,
+    type: 2}
+  m_PrefabInternal: {fileID: 1899851376}
 --- !u!4 &29774056 stripped
 Transform:
   m_PrefabParentObject: {fileID: 400152, guid: 75f2c935917588e4094f302c74456d66, type: 3}
@@ -5372,6 +5377,10 @@ Prefab:
     - target: {fileID: 400000, guid: 68609959f92f3584f9c2d984acace080, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 68609959f92f3584f9c2d984acace080, type: 2}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 68609959f92f3584f9c2d984acace080, type: 2}
@@ -18030,6 +18039,25 @@ Prefab:
 
 '
       objectReference: {fileID: 0}
+    - target: {fileID: 1000011141155332, guid: 4783eeab91ca9384ba4cdf1d95eca799, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014263368408, guid: 4783eeab91ca9384ba4cdf1d95eca799,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 2088868249}
+    - target: {fileID: 114000014263368408, guid: 4783eeab91ca9384ba4cdf1d95eca799,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestoreGame
+      objectReference: {fileID: 0}
+    - target: {fileID: 114000014263368408, guid: 4783eeab91ca9384ba4cdf1d95eca799,
+        type: 2}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4783eeab91ca9384ba4cdf1d95eca799, type: 2}
   m_IsPrefabParent: 0
@@ -20004,7 +20032,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5c6ff19dcec48e419e9a55ca053625b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  menu: {fileID: 0}
+  menu: {fileID: 21981800}
   player: {fileID: 1034107942}
   campFire: {fileID: 1724290209}
   campFireDistanceOffset: 5
