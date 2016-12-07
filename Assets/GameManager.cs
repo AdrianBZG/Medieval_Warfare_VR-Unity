@@ -11,7 +11,9 @@ public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public GameObject campFire;
 
-    public int numEnemiesAlive;
+    private int numEnemiesAlive;
+    
+    private int points;
 
 
 	// public values for comparisons bassically
@@ -32,8 +34,9 @@ public class GameManager : MonoBehaviour {
 	}
 
     // This function must be called every time an enemy is killed.
-    public void KilledEnemy ()
+    public void KilledEnemy (int p)
     {
+        points += p;
         numEnemiesAlive--;
         CheckWin();
     }
