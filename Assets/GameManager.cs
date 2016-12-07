@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public GameObject campFire;
 
+    public int numEnemiesAlive;
+
 
 	// public values for comparisons bassically
     // this variable contains the maximum distance where the player can interact with the campFire 
@@ -23,8 +25,30 @@ public class GameManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		campfireManager = campFire.GetComponent<CampfireManager>();
+
+        numEnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
+        print(numEnemiesAlive + " enemies alive");
+
 	}
+
+    // This function must be called every time an enemy is killed.
+    public void KilledEnemy ()
+    {
+        numEnemiesAlive--;
+        CheckWin();
+    }
+
+    void CheckWin ()
+    {
+        if (numEnemiesAlive == 0)
+        {
+            WinGame();
+        }
+    }
 	
+    
+
+
 	// Update is called once per frame
 	void Update () {
 		if (Vector3.Distance(player.transform.position, campFire.transform.position) < campDistEvent) {
@@ -71,6 +95,11 @@ public class GameManager : MonoBehaviour {
     {
         print("End game");
         Application.Quit();
+    }
+
+    public static void WinGame ()
+    {
+        // Show winnning Cartel ?
     }
 
 

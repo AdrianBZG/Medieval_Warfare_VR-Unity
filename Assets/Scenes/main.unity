@@ -2068,6 +2068,10 @@ Prefab:
       propertyPath: m_Name
       value: PrefabTrollAI1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
   m_IsPrefabParent: 0
@@ -6024,6 +6028,10 @@ Prefab:
       propertyPath: m_Name
       value: PrefabTrollAI1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
   m_IsPrefabParent: 0
@@ -7010,6 +7018,10 @@ Prefab:
     - target: {fileID: 400102, guid: 2248ce2d39a7eb144a8be80cb0e7e1d5, type: 2}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 99.86301
+      objectReference: {fileID: 0}
+    - target: {fileID: 100102, guid: 2248ce2d39a7eb144a8be80cb0e7e1d5, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2248ce2d39a7eb144a8be80cb0e7e1d5, type: 2}
@@ -9272,6 +9284,10 @@ Prefab:
       propertyPath: m_Name
       value: PrefabTrollAI1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
   m_IsPrefabParent: 0
@@ -10601,6 +10617,10 @@ Prefab:
     - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
       propertyPath: m_Name
       value: PrefabTrollAI1 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
@@ -17850,6 +17870,10 @@ Prefab:
       propertyPath: m_Name
       value: PrefabTrollAI1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 1000013435406852, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
+      propertyPath: m_TagString
+      value: Enemy
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e6bc078d98a0243b4a68793f88d6c9fb, type: 2}
   m_IsPrefabParent: 0
@@ -20056,6 +20080,7 @@ MonoBehaviour:
   menu: {fileID: 21981800}
   player: {fileID: 1034107942}
   campFire: {fileID: 1724290209}
+  numEnemiesAlive: 0
   campDistEvent: 0
 --- !u!4 &2088868250
 Transform:
