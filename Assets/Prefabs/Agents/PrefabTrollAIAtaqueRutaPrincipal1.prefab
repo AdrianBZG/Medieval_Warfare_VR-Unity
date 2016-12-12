@@ -386,7 +386,7 @@ GameObject:
   - 114: {fileID: 114000014218742010}
   m_Layer: 0
   m_Name: PrefabTrollAIAtaqueRutaPrincipal1
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1538,7 +1538,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012216126884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -412.67163, y: 22.930664, z: -730.0057}
+  m_LocalPosition: {x: -393.4, y: 22.930664, z: -742.4}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1945,6 +1945,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifePoints: 100
   dead: 0
+  isEnemyAI: 1
   agentEngine: {fileID: 1000011225160192}
   agentEntityRig: {fileID: 0}
   timeToNextAttack: 0

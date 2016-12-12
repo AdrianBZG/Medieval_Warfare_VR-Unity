@@ -5,6 +5,7 @@ public class AIAgent : MonoBehaviour {
 
 	public int lifePoints = 100;
 	public bool dead = false;
+    public bool isEnemyAI = false;
 	private bool canBeHitten = true;
 	public GameObject agentEngine = null;
 	public RAIN.Entities.EntityRig agentEntityRig = null;
@@ -38,6 +39,15 @@ public class AIAgent : MonoBehaviour {
 
 	private void checkDead() {
 		if (this.lifePoints < 1 && !isDead()) {
+            // Points manager
+            if(isEnemyAI)
+            {
+                GameManager.KilledEnemy(50);
+            } else
+            {
+                GameManager.KilledAlly(25);
+            }
+            //
 			dead = true;
 			agentEntityRig.Entity.IsActive = false;
 			agentEngine.SetActive (false);

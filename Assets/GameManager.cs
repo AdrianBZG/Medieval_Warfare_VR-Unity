@@ -11,9 +11,10 @@ public class GameManager : MonoBehaviour {
 	public GameObject player;
 	public GameObject campFire;
 
-    private int numEnemiesAlive;
+    private static int numEnemiesAlive;
+    private static int numAlliesAlive;
     
-    private int points;
+    private static int points;
 
 
 	// public values for comparisons bassically
@@ -30,30 +31,48 @@ public class GameManager : MonoBehaviour {
 
         numEnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
         print(numEnemiesAlive + " enemies alive");
+        numAlliesAlive = GameObject.FindGameObjectsWithTag("Ally").Length;
+        print(numAlliesAlive + " allies alive");
 
-	}
+    }
 
     // This function must be called every time an enemy is killed.
-    public void KilledEnemy (int p)
+    public static void KilledEnemy (int p)
     {
         points += p;
         numEnemiesAlive--;
         CheckWin();
     }
 
-    void CheckWin ()
+    // This function must be called every time an ally is killed.
+    public static void KilledAlly (int p)
+    {
+        points -= p;
+        numAlliesAlive--;
+        CheckLose();
+    }
+
+    private static void CheckWin ()
     {
         if (numEnemiesAlive == 0)
         {
             WinGame();
         }
     }
-	
-    
+
+    private static void CheckLose()
+    {
+        if (numAlliesAlive == 0)
+        {
+            LoseGame();
+        }
+    }
 
 
-	// Update is called once per frame
-	void Update () {
+
+
+    // Update is called once per frame
+    void Update () {
 		if (Vector3.Distance(player.transform.position, campFire.transform.position) < campDistEvent) {
 			if (Input.GetKeyDown(KeyCode.LeftShift)) {
 				campfireManager.Switch();
@@ -103,6 +122,11 @@ public class GameManager : MonoBehaviour {
     public static void WinGame ()
     {
         // Show winnning Cartel ?
+    }
+
+    public static void LoseGame()
+    {
+        // Show lose Cartel ?
     }
 
 

@@ -222,7 +222,7 @@ GameObject:
   - 114: {fileID: 114000014007962072}
   m_Layer: 0
   m_Name: PrefabSoldadoHumanoAIPatrullaCiudad
-  m_TagString: Untagged
+  m_TagString: Ally
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1057,7 +1057,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011100058034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.335693, y: -2.0893555, z: 1.5304413}
+  m_LocalPosition: {x: -67.9978, y: -2.3618164, z: -88.970535}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1737,6 +1737,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lifePoints: 100
   dead: 0
+  isEnemyAI: 0
   agentEngine: {fileID: 1000011670933732}
   agentEntityRig: {fileID: 0}
   timeToNextAttack: 0
