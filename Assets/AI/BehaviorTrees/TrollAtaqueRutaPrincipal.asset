@@ -1,0 +1,74 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1227330239, guid: 9fa2ecd1ff2ad394281dd3bf72c5b76e, type: 3}
+  m_Name: TrollAtaqueRutaPrincipal
+  m_EditorClassIdentifier: 
+  _dataSerializer:
+    _serializedData: <scriptableobject version="1.3" type="RAIN.BehaviorTrees.BTAsset"><fields><field
+      value="&lt;behaviortree version=&quot;1.1&quot; repeatuntil=&quot;&quot; name=&quot;TrollAtaqueRutaPrincipal&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;root&quot; debugbreak=&quot;False&quot;&gt;&lt;parallel
+      tiebreaker=&quot;fail&quot; succeed=&quot;all&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;Eyes&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;Check for humans&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;humanSeen&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;False&quot; aspectvariable=&quot;humanPosition&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Human&amp;quot;&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;humanSeen
+      != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;detect
+      sensor=&quot;&amp;quot;Proximity&amp;quot;&quot; repeatuntil=&quot;running&quot;
+      name=&quot;Check for proximity&quot; matchtype=&quot;best&quot; entityobjectvariable=&quot;targetNear&quot;
+      debugbreak=&quot;False&quot; consistent=&quot;False&quot; aspectvariable=&quot;humanNearPosition&quot;
+      aspectobjectvariable=&quot;&quot; aspect=&quot;&amp;quot;Human&amp;quot;&quot;
+      /&gt;&lt;selector usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;selector&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;constraint repeatuntil=&quot;&quot; priority=&quot;&quot;
+      name=&quot;constraint&quot; debugbreak=&quot;False&quot; constraint=&quot;targetNear
+      == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot; succeed=&quot;all&quot;
+      repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
+      repeatuntil=&quot;&quot; name=&quot;animate&quot; debugbreak=&quot;False&quot;
+      animationstate=&quot;run&quot; /&gt;&lt;audio waituntildone=&quot;False&quot;
+      repeatuntil=&quot;running&quot; name=&quot;audio&quot; forcestoponexit=&quot;False&quot;
+      delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;&quot; /&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;2&quot; repeatuntil=&quot;&quot;
+      priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;humanPosition&quot;
+      movespeed=&quot;3&quot; facetarget=&quot;humanPosition&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;targetNear != null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;sequencer usepriorities=&quot;False&quot;
+      repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;animate
+      repeatuntil=&quot;running&quot; priority=&quot;&quot; name=&quot;animate&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;attack2&quot; /&gt;&lt;/sequencer&gt;&lt;action
+      repeatuntil=&quot;success&quot; parametervalues=&quot;&quot; parameters=&quot;&quot;
+      namespace=&quot;&quot; name=&quot;Do damage&quot; debugbreak=&quot;False&quot;
+      classname=&quot;DoDamageToDetectedAgent&quot; /&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint
+      repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
+      constraint=&quot;humanSeen == null&quot;&gt;&lt;parallel tiebreaker=&quot;fail&quot;
+      succeed=&quot;all&quot; repeatuntil=&quot;&quot; name=&quot;parallel&quot; fail=&quot;any&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;animate repeatuntil=&quot;&quot; name=&quot;animate&quot;
+      debugbreak=&quot;False&quot; animationstate=&quot;run&quot; /&gt;&lt;sequencer
+      usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;CitiesPath1Reverse&quot;
+      waypointactiontype=&quot;patrol&quot; traversetype=&quot;oneway&quot; traverseorder=&quot;forward&quot;
+      repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;&quot;
+      name=&quot;waypointpatrol&quot; movetargetvariable=&quot;moveTarget&quot; debugbreak=&quot;False&quot;&gt;&lt;move
+      turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
+      movespeed=&quot;5&quot; facetarget=&quot;&quot; debugbreak=&quot;False&quot;
+      closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/waypointpatrol&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;/selector&gt;&lt;/parallel&gt;&lt;/sequencer&gt;&lt;/behaviortree&gt;"
+      type="System.String" id="treeData" /><field type="System.Array" id="treeBindings"
+      elementtype="System.String" /></fields><references /></scriptableobject>
+    _serializedGameObjects: []
+    _serializedCustomData: []

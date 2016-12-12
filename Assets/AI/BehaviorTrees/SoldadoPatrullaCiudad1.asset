@@ -60,7 +60,7 @@ MonoBehaviour:
       debugbreak=&quot;False&quot; animationstate=&quot;walk&quot; /&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
       debugbreak=&quot;False&quot;&gt;&lt;waypointpatrol waypointsetvariable=&quot;PatrullaCiudad1Network&quot;
-      waypointactiontype=&quot;patrol&quot; traversetype=&quot;loop&quot; traverseorder=&quot;forward&quot;
+      waypointactiontype=&quot;patrol&quot; traversetype=&quot;pingpong&quot; traverseorder=&quot;forward&quot;
       repeatuntil=&quot;&quot; priority=&quot;&quot; pathtargetvariable=&quot;&quot;
       name=&quot;waypointpatrol&quot; movetargetvariable=&quot;moveTarget&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;&quot; repeatuntil=&quot;&quot; name=&quot;move&quot; movetarget=&quot;moveTarget&quot;
