@@ -384,6 +384,7 @@ GameObject:
   - 54: {fileID: 54000012706691640}
   - 136: {fileID: 136000012913647640}
   - 114: {fileID: 114000014218742010}
+  - 114: {fileID: 114000010249384170}
   m_Layer: 0
   m_Name: PrefabTrollAIAtaqueRutaPrincipal1
   m_TagString: Enemy
@@ -1538,7 +1539,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012216126884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -393.4, y: 22.930664, z: -742.4}
+  m_LocalPosition: {x: -412.67163, y: 22.930664, z: -730.0057}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1774,6 +1775,35 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &114000010249384170
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: cc5500e544d4c8d4b832330c4aafe98e, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000010553924844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1949,6 +1979,7 @@ MonoBehaviour:
   agentEngine: {fileID: 1000011225160192}
   agentEntityRig: {fileID: 0}
   timeToNextAttack: 0
+  damagedAudio: {fileID: 114000010249384170}
 --- !u!136 &136000012913647640
 CapsuleCollider:
   m_ObjectHideFlags: 1

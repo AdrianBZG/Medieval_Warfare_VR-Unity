@@ -10,9 +10,13 @@ public class AIAgent : MonoBehaviour {
 	public GameObject agentEngine = null;
 	public RAIN.Entities.EntityRig agentEntityRig = null;
 	public float timeToNextAttack = 0.0f;
+    public GvrAudioSource damagedAudio;
+
+    private AudioClip damaged;
 
 	// Use this for initialization
 	void Start () {
+        damaged  = damagedAudio.GetComponent<AudioClip>();
 		this.lifePoints = 100;
 		dead = false;
 		canBeHitten = true;
@@ -70,10 +74,16 @@ public class AIAgent : MonoBehaviour {
 			this.lifePoints -= damage;
 			checkDead ();
 			canBeHitten = false;
-		}
+            PlaySoundDamage();
+        }
 	}
 		
 	public bool isDead() {
 		return dead;
 	}
+
+    public void PlaySoundDamage ()
+    {
+        damagedAudio.Play();
+    }
 }
