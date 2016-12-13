@@ -5,7 +5,7 @@ public class GameManager : MonoBehaviour {
     public static MyDelegate myDelegate;
 
 
-    public GameObject menu;
+    public MenuManager menuManager;
     
 	// public GameObjects
 	public GameObject player;
@@ -89,8 +89,11 @@ public class GameManager : MonoBehaviour {
     
     public void ShowMenu ()
     {
-        PauseGame();
-        menu.SetActive(true);
+        if (!menuManager.IsActive())
+        {
+            PauseGame();
+            menuManager.Show();
+        }
     }
 
     public void PauseGame ()
@@ -106,10 +109,12 @@ public class GameManager : MonoBehaviour {
     public void RestoreGame ()
     {
         Time.timeScale = 1.0f;
-        menu.SetActive(false);
+        menuManager.Hide();
+        print("restore game");
         foreach (GvrAudioSource source in GameObject.FindObjectsOfType<GvrAudioSource>())
         {
             source.UnPause();
+            print("source unpaused");
         }
     }
 
