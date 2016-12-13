@@ -25,10 +25,6 @@ public class LifeBarManager : MonoBehaviour {
 	}
 
 	void Update () {
-		if (Input.GetMouseButtonDown(0)) {
-			TakeDamage (damage);
-			SetGreenBarWidth();
-		}
 	}
 
 
