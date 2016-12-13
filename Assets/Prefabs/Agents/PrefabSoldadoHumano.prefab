@@ -1169,10 +1169,10 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012386203066}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.99, y: 0.36, z: -2.39}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: -0, y: 0.932542, z: -0, w: 0.36106148}
+  m_LocalPosition: {x: 3740.6763, y: -5858.5923, z: 323.78943}
+  m_LocalScale: {x: 3, y: 3, z: 3}
+  m_LocalEulerAnglesHint: {x: 0, y: 137.552, z: 0}
   m_Children:
   - {fileID: 4000012543601352}
   - {fileID: 4000011162079680}
@@ -1470,12 +1470,12 @@ Animation:
   m_GameObject: {fileID: 1000012386203066}
   m_Enabled: 1
   serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 45b745947066ede498a3dfc1252e6366, type: 3}
+  m_Animation: {fileID: 7400000, guid: 26f24d3788beb7a4fac1c838e445eafd, type: 3}
   m_Animations:
   - {fileID: 7400000, guid: 45b745947066ede498a3dfc1252e6366, type: 3}
-  - {fileID: 7400000, guid: 4def9022560108e4197369204ac9034f, type: 3}
+  - {fileID: 7400000, guid: eeef3e77cf4a1db49803173878cad1f3, type: 3}
   - {fileID: 7400000, guid: ac3faaee32e103949bb850a5a051b9c1, type: 3}
-  - {fileID: 7400000, guid: 50c744f40f346964a845c757fc7c2bb1, type: 3}
+  - {fileID: 7400000, guid: f694ef87cb6e5734abb0f460e62c4eb1, type: 3}
   - {fileID: 7400000, guid: 40a6a3436ba41974b889a04119f0aef5, type: 3}
   - {fileID: 7400000, guid: 24ae3915dbc695a4fad34611e3652722, type: 3}
   - {fileID: 7400000, guid: 9e95c8396d8d5b049a11f1a4c88190dc, type: 3}
@@ -1483,10 +1483,10 @@ Animation:
   - {fileID: 7400000, guid: a1dd388bc4fa02d45b4ea475e9f3a241, type: 3}
   - {fileID: 7400000, guid: 2092201033647674aa4fde618d4c62c5, type: 3}
   - {fileID: 7400000, guid: 63c2371ba506d2e43add8aa2c1e86f7e, type: 3}
-  - {fileID: 7400000, guid: 0703818543f0223499b77073cf89329a, type: 3}
+  - {fileID: 7400000, guid: 26f24d3788beb7a4fac1c838e445eafd, type: 3}
   - {fileID: 7400000, guid: ba0567528204cb54d8959473b2d74455, type: 3}
   - {fileID: 7400000, guid: 095660efc4b4fb24dbcfb163eafe456d, type: 3}
-  - {fileID: 7400000, guid: 929f35178c66e144db2f78112e8181bd, type: 3}
+  - {fileID: 7400000, guid: d397029a1bafb5c4785179671d38e723, type: 3}
   - {fileID: 7400000, guid: 0cfdb4eeecb10174aa816fe783c7f3be, type: 3}
   m_WrapMode: 0
   m_PlayAutomatically: 1
