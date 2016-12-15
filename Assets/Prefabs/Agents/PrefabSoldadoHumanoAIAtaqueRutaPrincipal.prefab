@@ -203,6 +203,7 @@ GameObject:
   - 136: {fileID: 136000013733923588}
   - 54: {fileID: 54000010407267398}
   - 114: {fileID: 114000013027212504}
+  - 114: {fileID: 114000012826837914}
   m_Layer: 0
   m_Name: PrefabSoldadoHumanoAIAtaqueRutaPrincipal
   m_TagString: Ally
@@ -1675,6 +1676,35 @@ MonoBehaviour:
     - {fileID: 7400000, guid: f694ef87cb6e5734abb0f460e62c4eb1, type: 3}
     - {fileID: 7400000, guid: 26f24d3788beb7a4fac1c838e445eafd, type: 3}
     _serializedCustomData: []
+--- !u!114 &114000012826837914
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011454829086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 085a5a052c04c3445a393451e786db06, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000013027212504
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1692,7 +1722,7 @@ MonoBehaviour:
   agentEngine: {fileID: 1000014272920486}
   agentEntityRig: {fileID: 0}
   timeToNextAttack: 0
-  damagedAudio: {fileID: 0}
+  damagedAudio: {fileID: 114000012826837914}
 --- !u!114 &114000013316147074
 MonoBehaviour:
   m_ObjectHideFlags: 1

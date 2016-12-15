@@ -220,6 +220,7 @@ GameObject:
   - 136: {fileID: 136000010822930806}
   - 54: {fileID: 54000012466037134}
   - 114: {fileID: 114000014007962072}
+  - 114: {fileID: 114000011435654320}
   m_Layer: 0
   m_Name: PrefabSoldadoHumanoAIPatrullaCiudad
   m_TagString: Ally
@@ -1057,7 +1058,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000011100058034}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -36.335693, y: -2.0893555, z: 1.5304413}
+  m_LocalPosition: {x: -67.9978, y: -2.3618164, z: -88.970535}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1554,6 +1555,35 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &114000011435654320
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000011100058034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 085a5a052c04c3445a393451e786db06, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000012342334638
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1610,9 +1640,9 @@ MonoBehaviour:
       id="_workingMemory" childrenvisible="False" /><field type="RAIN.Minds.BasicMind"
       reference="2" id="_mind" childrenvisible="False" /><field type="RAIN.Motion.BasicMotor"
       reference="3" id="_motor" childrenvisible="False" /><field type="RAIN.Animation.BasicAnimator"
-      reference="4" id="_animator" childrenvisible="True" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="4" id="_animator" childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator"
       reference="9" id="_navigator" childrenvisible="False" /><field type="RAIN.Perception.BasicSenses"
-      reference="10" id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      reference="10" id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -1679,9 +1709,9 @@ MonoBehaviour:
       /><field value="Eyes" type="System.String" id="_sensorName" /><field value="True"
       type="System.Boolean" id="_isActive" /><field value="0,6,0,5529412" type="UnityEngine.Color"
       id="_sensorColor" /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="2"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field
-      value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
-      id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+      /><field value="0,1.683984,0" type="UnityEngine.Vector3" id="_positionOffset"
+      /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field
+      type="System.Collections.Generic.List" id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       /><field value="10" type="System.Single" id="_range" /><field value="False"
       type="System.Boolean" id="_canDetectSelf" /><field value="98" type="System.Single"
       id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
@@ -1691,7 +1721,7 @@ MonoBehaviour:
       type="System.Boolean" id="_showVisual" /><field value="Proximity" type="System.String"
       id="_sensorName" /><field value="True" type="System.Boolean" id="_isActive"
       /><field value="0,0,6,0" type="UnityEngine.Color" id="_sensorColor" /><field
-      type="UnityEngine.Transform" id="_mountPoint" gameobject="3" /><field value="0,0,0"
+      type="UnityEngine.Transform" id="_mountPoint" gameobject="3" /><field value="0,1.008594,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
       elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="2.64"
@@ -1727,7 +1757,7 @@ MonoBehaviour:
   agentEngine: {fileID: 1000011670933732}
   agentEntityRig: {fileID: 0}
   timeToNextAttack: 0
-  damagedAudio: {fileID: 0}
+  damagedAudio: {fileID: 114000011435654320}
 --- !u!136 &136000010822930806
 CapsuleCollider:
   m_ObjectHideFlags: 1
