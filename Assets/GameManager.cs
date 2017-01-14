@@ -16,10 +16,12 @@ public class GameManager : MonoBehaviour {
     
     private static int points;
 
+    private static bool playerHaveKey = false;
 
-	// public values for comparisons bassically
+
+    // public values for comparisons bassically
     // this variable contains the maximum distance where the player can interact with the campFire 
-	public float campDistEvent;
+    public float campDistEvent;
 
 
 	// Private assets
@@ -41,7 +43,7 @@ public class GameManager : MonoBehaviour {
     {
         points += p;
         numEnemiesAlive--;
-        CheckWin();
+        //CheckWin();
     }
 
     // This function must be called every time an ally is killed.
@@ -68,7 +70,21 @@ public class GameManager : MonoBehaviour {
         }
     }
 
+    public static bool allEnemiesDead ()
+    {
+        return numEnemiesAlive == 0;
+    }
 
+    public static void setPlayerHaveKey (bool haveKey)
+    {
+        playerHaveKey = haveKey;
+        print("PlayerHaveKey");
+    }
+
+    public static bool getPlayerHaveKey ()
+    {
+        return playerHaveKey;
+    }
 
 
     // Update is called once per frame

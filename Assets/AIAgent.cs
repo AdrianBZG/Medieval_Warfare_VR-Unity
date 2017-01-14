@@ -55,6 +55,10 @@ public class AIAgent : MonoBehaviour {
 			dead = true;
 			agentEntityRig.Entity.IsActive = false;
 			agentEngine.SetActive (false);
+            if (GameManager.allEnemiesDead())
+            {
+                GetComponent<KeyInvoker>().instantiateKey();
+            }
 			GetComponent<Animation>().Play ("die1", PlayMode.StopAll);
 		}
 	}
@@ -72,9 +76,11 @@ public class AIAgent : MonoBehaviour {
 		if (canBeHitten) {
 			timeToNextAttack = 2.0f;
 			this.lifePoints -= damage;
-			checkDead ();
+            if (!isDead())
+                PlaySoundDamage();
+            checkDead ();
 			canBeHitten = false;
-            PlaySoundDamage();
+
         }
 	}
 		

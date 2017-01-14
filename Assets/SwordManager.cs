@@ -15,16 +15,15 @@ public class SwordManager : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter (Collider col)
+    void OnTriggerEnter(Collider col)
     {
-        print(col.tag);
-        if (col.tag == "Enemy" || col.tag == "Obstacle")
-        {
+        if (col.tag == "Obstacle")
             attackSound.Play();
-            if (col.tag == "Enemy")
-            {
-                col.gameObject.GetComponent<AIAgent>().getDamage(swordDamage);
-            }
+        if (col.tag == "Enemy")
+        {
+            if (!col.gameObject.GetComponent<AIAgent>().isDead())
+                attackSound.Play();
+            col.gameObject.GetComponent<AIAgent>().getDamage(swordDamage);
         }
     }
 }

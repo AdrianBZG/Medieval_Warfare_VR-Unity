@@ -1575,11 +1575,10 @@ MonoBehaviour:
       id="0"><field value="True" type="System.Boolean" id="_isActive" /><field type="UnityEngine.GameObject"
       id="_body" gameobject="0" /><field type="RAIN.Memory.BasicMemory" reference="1"
       id="_workingMemory" /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind"
-      childrenvisible="False" /><field type="RAIN.Motion.BasicMotor" reference="3"
-      id="_motor" /><field type="RAIN.Animation.BasicAnimator" reference="4" id="_animator"
-      childrenvisible="False" /><field type="RAIN.Navigation.BasicNavigator" reference="9"
-      id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="10" id="_senses"
-      childrenvisible="True" /><field type="System.Collections.Generic.List" id="_customElements"
+      /><field type="RAIN.Motion.BasicMotor" reference="3" id="_motor" /><field type="RAIN.Animation.BasicAnimator"
+      reference="4" id="_animator" /><field type="RAIN.Navigation.BasicNavigator"
+      reference="9" id="_navigator" /><field type="RAIN.Perception.BasicSenses" reference="10"
+      id="_senses" /><field type="System.Collections.Generic.List" id="_customElements"
       elementtype="RAIN.Core.CustomAIElement" /></reference><reference type="RAIN.Memory.BasicMemory"
       refcount="1" id="1"><field type="System.Collections.Generic.List" id="_memoryItems"
       elementtype="RAIN.Memory.BasicMemory+MemoryItem" /></reference><reference type="RAIN.Minds.BasicMind"
@@ -1601,7 +1600,7 @@ MonoBehaviour:
       reference="7" id="element2" /><field type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       reference="8" id="element3" /></field></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="5"><field value="walk" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="4"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -1609,7 +1608,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="6"><field value="swordStrike2" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="5"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -1617,7 +1616,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="7"><field value="run" type="System.String" id="stateName" /><field
-      type="UnityEngine.AnimationClip" id="animationClip" gameobject="6" /><field
+      type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1" /><field
       value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -1625,7 +1624,7 @@ MonoBehaviour:
       /><field type="System.Collections.Generic.List" id="mixingTransforms" elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
       refcount="1" id="8"><field value="swordStance" type="System.String" id="stateName"
-      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="7"
+      /><field type="UnityEngine.AnimationClip" id="animationClip" gameobject="-1"
       /><field value="0" type="System.Int32" id="layer" /><field value="1" type="System.Single"
       id="weight" /><field value="1" type="System.Single" id="speed" /><field value="0"
       type="System.Single" id="fadeInTime" /><field value="0" type="System.Single"
@@ -1671,10 +1670,6 @@ MonoBehaviour:
     - {fileID: 11400000, guid: 2cc98f541c06c10408b23150a1527237, type: 2}
     - {fileID: 4000010739900284}
     - {fileID: 4000010739900284}
-    - {fileID: 7400000, guid: eeef3e77cf4a1db49803173878cad1f3, type: 3}
-    - {fileID: 7400000, guid: d397029a1bafb5c4785179671d38e723, type: 3}
-    - {fileID: 7400000, guid: f694ef87cb6e5734abb0f460e62c4eb1, type: 3}
-    - {fileID: 7400000, guid: 26f24d3788beb7a4fac1c838e445eafd, type: 3}
     _serializedCustomData: []
 --- !u!114 &114000012826837914
 MonoBehaviour:
