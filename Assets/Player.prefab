@@ -2154,7 +2154,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSound: {fileID: 114000012340481030}
-  swordDamage: 100
+  swordDamage: 30
 --- !u!114 &114000011032860064
 MonoBehaviour:
   m_ObjectHideFlags: 1
