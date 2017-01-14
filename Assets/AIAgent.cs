@@ -11,6 +11,8 @@ public class AIAgent : MonoBehaviour {
 	public RAIN.Entities.EntityRig agentEntityRig = null;
 	public float timeToNextAttack = 0.0f;
     public GvrAudioSource damagedAudio;
+	private string fatherGameObjectName;
+	public HealthManager playerHealthManager;
 
     private AudioClip damaged;
 
@@ -22,6 +24,7 @@ public class AIAgent : MonoBehaviour {
 		canBeHitten = true;
 		timeToNextAttack = 0.0f;
 		agentEntityRig = GetComponentInChildren<RAIN.Entities.EntityRig>();
+		fatherGameObjectName = transform.root.gameObject.name;
 	}
 	
 	// Update is called once per frame
@@ -42,33 +45,34 @@ public class AIAgent : MonoBehaviour {
 	}
 
 	private void checkDead() {
-		if (this.lifePoints < 1 && !isDead()) {
-            // Points manager
-            if(isEnemyAI)
-            {
-                GameManager.KilledEnemy(50);
-            } else
-            {
-                GameManager.KilledAlly(25);
-            }
-            //
-			dead = true;
-			agentEntityRig.Entity.IsActive = false;
-			agentEngine.SetActive (false);
-            if (GameManager.allEnemiesDead())
-            {
-                GetComponent<KeyInvoker>().instantiateKey();
-            }
-			GetComponent<Animation>().Play ("die1", PlayMode.StopAll);
+		if (fatherGameObjectName != "Player") {
+			if (this.lifePoints < 1 && !isDead ()) {
+				// Points manager
+				if (isEnemyAI) {
+					GameManager.KilledEnemy (50);
+				} else {
+					GameManager.KilledAlly (25);
+				}
+				//
+				dead = true;
+				agentEntityRig.Entity.IsActive = false;
+				agentEngine.SetActive (false);
+				if (GameManager.allEnemiesDead ()) {
+					GetComponent<KeyInvoker> ().instantiateKey ();
+				}
+				GetComponent<Animation> ().Play ("die1", PlayMode.StopAll);
+			}
 		}
 	}
 
 	public void getDamage() {
-		if (canBeHitten) {
+		if (canBeHitten && fatherGameObjectName != "Player") {
 			timeToNextAttack = 2.0f;
 			this.lifePoints -= 20;
 			checkDead ();
 			canBeHitten = false;
+		} else if(fatherGameObjectName == "Player") {
+			playerHealthManager.Damage (10);
 		}
 	}
 
