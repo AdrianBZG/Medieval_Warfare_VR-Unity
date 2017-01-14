@@ -386,6 +386,9 @@ GameObject:
   - 114: {fileID: 114000014218742010}
   - 114: {fileID: 114000010249384170}
   - 114: {fileID: 114000011775422040}
+  - 114: {fileID: 114000010946222794}
+  - 114: {fileID: 114000010248392578}
+  - 114: {fileID: 114000010410660852}
   m_Layer: 0
   m_Name: PrefabTrollAIAtaqueRutaPrincipal1
   m_TagString: Enemy
@@ -1540,7 +1543,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012216126884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -107.90967, y: -3.8041992, z: -175.77315}
+  m_LocalPosition: {x: -392.9, y: 22.930664, z: -705.8}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1776,6 +1779,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
+--- !u!114 &114000010248392578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000010249384170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1805,6 +1820,18 @@ MonoBehaviour:
   sourceMaxDistance: 500
   sourceMinDistance: 0
   hrtfEnabled: 1
+--- !u!114 &114000010410660852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000010553924844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1839,6 +1866,18 @@ MonoBehaviour:
     - {fileID: 1000012216126884}
     - {fileID: 4000013921901480}
     _serializedCustomData: []
+--- !u!114 &114000010946222794
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000011284565736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1907,11 +1946,11 @@ MonoBehaviour:
       type="System.String" id="_sensorName" /><field value="True" type="System.Boolean"
       id="_isActive" /><field value="0,6,0,5529412" type="UnityEngine.Color" id="_sensorColor"
       /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3" /><field
-      value="0,2.403711,0.6410034" type="UnityEngine.Vector3" id="_positionOffset"
-      /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset" /><field
-      type="System.Collections.Generic.List" id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
+      value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
+      type="UnityEngine.Vector3" id="_angleOffset" /><field type="System.Collections.Generic.List"
+      id="_filters" elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter"
       /><field value="40" type="System.Single" id="_range" /><field value="False"
-      type="System.Boolean" id="_canDetectSelf" /><field value="150" type="System.Single"
+      type="System.Boolean" id="_canDetectSelf" /><field value="360" type="System.Single"
       id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
       /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="-5"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
@@ -1919,12 +1958,12 @@ MonoBehaviour:
       type="System.Boolean" id="_showVisual" /><field value="Proximity" type="System.String"
       id="_sensorName" /><field value="True" type="System.Boolean" id="_isActive"
       /><field value="0,6,0,5529412" type="UnityEngine.Color" id="_sensorColor" /><field
-      type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,1.887109,0.4801636"
+      type="UnityEngine.Transform" id="_mountPoint" gameobject="4" /><field value="0,1.468164,0"
       type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_angleOffset" /><field type="System.Collections.Generic.List" id="_filters"
       elementtype="RAIN.Perception.Sensors.Filters.RAINSensorFilter" /><field value="4"
       type="System.Single" id="_range" /><field value="False" type="System.Boolean"
-      id="_canDetectSelf" /><field value="180" type="System.Single" id="_horizontalAngle"
+      id="_canDetectSelf" /><field value="360" type="System.Single" id="_horizontalAngle"
       /><field value="180" type="System.Single" id="_verticalAngle" /><field value="False"
       type="System.Boolean" id="_lineOfSight" /><field value="-5" type="UnityEngine.LayerMask"
       id="_lineOfSightMask" /></reference><reference type="RAIN.Animation.BasicAnimator+BasicAnimatorState"
