@@ -107,7 +107,6 @@ GameObject:
   - 4: {fileID: 4000012135141804}
   - 65: {fileID: 65000011043509622}
   - 114: {fileID: 114000011741763240}
-  - 114: {fileID: 114000011340018736}
   m_Layer: 0
   m_Name: JailManager
   m_TagString: Obstacle
@@ -458,23 +457,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &114000011340018736
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000014028293536}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f049201296a71e9429899ca2168d7129, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  jailWalls:
-  - {fileID: 1000013422605044}
-  - {fileID: 1000013314718810}
-  - {fileID: 1000014259245104}
-  - {fileID: 1000011201981788}
-  kidnaped: {fileID: 0}
 --- !u!114 &114000011741763240
 MonoBehaviour:
   m_ObjectHideFlags: 1

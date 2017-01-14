@@ -1749,7 +1749,7 @@ MonoBehaviour:
   dead: 0
   isEnemyAI: 0
   agentEngine: {fileID: 1000011670933732}
-  agentEntityRig: {fileID: 0}
+  agentEntityRig: {fileID: 114000012342334638}
   timeToNextAttack: 0
   damagedAudio: {fileID: 114000011435654320}
 --- !u!136 &136000010822930806

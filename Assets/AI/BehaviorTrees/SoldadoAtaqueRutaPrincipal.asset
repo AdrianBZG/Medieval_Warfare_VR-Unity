@@ -40,7 +40,7 @@ MonoBehaviour:
       animationstate=&quot;run&quot; /&gt;&lt;sequencer usepriorities=&quot;False&quot;
       repeatuntil=&quot;&quot; name=&quot;sequencer&quot; debugbreak=&quot;False&quot;&gt;&lt;move
       turnspeed=&quot;2&quot; repeatuntil=&quot;&quot; priority=&quot;&quot; name=&quot;move&quot;
-      movetarget=&quot;trollPosition&quot; movespeed=&quot;3&quot; facetarget=&quot;trollPosition&quot;
+      movetarget=&quot;trollPosition&quot; movespeed=&quot;4&quot; facetarget=&quot;trollPosition&quot;
       debugbreak=&quot;False&quot; closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot;
       /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint repeatuntil=&quot;&quot;
       priority=&quot;&quot; name=&quot;constraint&quot; debugbreak=&quot;False&quot;
