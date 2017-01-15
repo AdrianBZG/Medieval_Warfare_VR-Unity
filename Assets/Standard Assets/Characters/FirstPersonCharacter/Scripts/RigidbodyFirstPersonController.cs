@@ -12,6 +12,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 
 		public Animator anim;
         public MonoBehaviour audioManager;
+        public MonoBehaviour playerManager;
         
         
 
@@ -133,8 +134,13 @@ namespace UnityStandardAssets.Characters.FirstPerson
         }
 
 
-        bool wantAttack = false;
-        bool canAttack = true;
+        public bool wantAttack = false;
+        public bool canAttack = true;
+
+        public bool WantAttack ()
+        {
+            return wantAttack;
+        }
 
         private void Update()
         {
@@ -143,6 +149,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
 			if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.X) || (Input.touchCount > 0 && Input.GetTouch(0).phase == TouchPhase.Began)) {
 				anim.SetTrigger("attack");
                 wantAttack = true;
+                playerManager.Invoke("WantAttack", 0.0f);
 
 			}
 				
@@ -162,6 +169,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
                 Invoke("EnableAttack", 1.0f);
                 audioManager.Invoke("Sword", 0.5f);
                 wantAttack = false;
+                playerManager.Invoke("DontWantAttack", 0.0f);
             }
         }
 

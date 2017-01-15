@@ -4,6 +4,7 @@ using System.Collections;
 public class SwordManager : MonoBehaviour {
 
     public GvrAudioSource attackSound;
+    public PlayerManager playerManager;
     public int swordDamage = 20;
 	// Use this for initialization
 	void Start () {
@@ -21,9 +22,11 @@ public class SwordManager : MonoBehaviour {
             attackSound.Play();
         if (col.tag == "Enemy")
         {
-            if (!col.gameObject.GetComponent<AIAgent>().isDead())
+            if (!col.gameObject.GetComponent<AIAgent>().isDead() && playerManager.getWantAttack())
+            {
                 attackSound.Play();
-            col.gameObject.GetComponent<AIAgent>().getDamage(swordDamage);
+                col.gameObject.GetComponent<AIAgent>().getDamage(swordDamage);
+            }
         }
     }
 }

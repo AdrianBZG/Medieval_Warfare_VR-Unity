@@ -4,7 +4,7 @@ using System.Collections;
 public class HealthManager : MonoBehaviour {
 
     public int initialHealth;
-    public LifeBarManager lifeBar; 
+    public LifeBarManager lifeBar;
 
     private static int health;
 	// Use this for initialization
@@ -22,6 +22,7 @@ public class HealthManager : MonoBehaviour {
 
         print("Vida del player: " + health);
         GameObject.Find("LifeBar").GetComponent<LifeBarManager>().setLifePoints(health);
+        GameObject.FindObjectOfType<PlayerAudioManager>().Auch();
         CheckHealth();
     }
 

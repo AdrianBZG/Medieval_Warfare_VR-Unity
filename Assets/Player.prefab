@@ -230,6 +230,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 4000013354040876}
+  - 114: {fileID: 114000010463211688}
   - 114: {fileID: 114000014256891666}
   - 114: {fileID: 114000012060277450}
   m_Layer: 0
@@ -719,6 +720,7 @@ GameObject:
   - 114: {fileID: 114000011032860064}
   - 114: {fileID: 114000013617921184}
   - 114: {fileID: 114000010076906310}
+  - 114: {fileID: 114000011799831852}
   m_Layer: 0
   m_Name: RigidBodyFPSController
   m_TagString: Player
@@ -882,9 +884,10 @@ GameObject:
   - 95: {fileID: 95000013413332104}
   - 114: {fileID: 114000012056102994}
   - 114: {fileID: 114000014243116734}
+  - 111: {fileID: 111000011686757504}
   m_Layer: 0
   m_Name: CuerpoJugador
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1593,7 +1596,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000010799654524}
   m_LocalRotation: {x: -0, y: 0.7192769, z: -0, w: -0.6947236}
-  m_LocalPosition: {x: 3770.29, y: -5850.1, z: 321.42}
+  m_LocalPosition: {x: 3459.8, y: -5825.7, z: -395.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_LocalEulerAnglesHint: {x: 0, y: 268.069, z: 0}
   m_Children:
@@ -1979,6 +1982,25 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!111 &111000011686757504
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000014087964678}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: eeef3e77cf4a1db49803173878cad1f3, type: 3}
+  m_Animations:
+  - {fileID: 7400000, guid: f694ef87cb6e5734abb0f460e62c4eb1, type: 3}
+  - {fileID: 7400000, guid: 26f24d3788beb7a4fac1c838e445eafd, type: 3}
+  - {fileID: 7400000, guid: d397029a1bafb5c4785179671d38e723, type: 3}
+  - {fileID: 7400000, guid: eeef3e77cf4a1db49803173878cad1f3, type: 3}
+  - {fileID: 7400000, guid: 765dfc8fcb61d6a4989e160760f67201, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!111 &111000012452967722
 Animation:
   m_ObjectHideFlags: 1
@@ -2035,6 +2057,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   anim: {fileID: 95000013413332104}
   audioManager: {fileID: 114000013796941668}
+  playerManager: {fileID: 114000014256891666}
   cam: {fileID: 20000012430644390}
   movementSettings:
     ForwardSpeed: 9.42
@@ -2081,6 +2104,8 @@ MonoBehaviour:
     slowDownRate: 1
     airControl: 0
     shellOffset: 0
+  wantAttack: 0
+  canAttack: 1
 --- !u!114 &114000010368943194
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2099,7 +2124,7 @@ MonoBehaviour:
       reference="0" id="_entity" /></fields><references><reference type="RAIN.Entities.Entity"
       refcount="1" id="0"><field value="PrefabSoldadoHumanoAI1" type="System.String"
       id="_entityName" /><field value="True" type="System.Boolean" id="_isActive"
-      /><field type="UnityEngine.GameObject" id="_form" gameobject="-1" /><field type="System.Collections.Generic.List"
+      /><field type="UnityEngine.GameObject" id="_form" gameobject="0" /><field type="System.Collections.Generic.List"
       id="_aspects" elementtype="RAIN.Entities.Aspects.RAINAspect"><field type="RAIN.Entities.Aspects.VisualAspect"
       reference="1" id="element0" /></field></reference><reference type="RAIN.Entities.Aspects.VisualAspect"
       refcount="1" id="1"><field value="True" type="System.Boolean" id="_showVisual"
@@ -2108,12 +2133,24 @@ MonoBehaviour:
       type="UnityEngine.Color" id="_aspectColor" /><field value="-0.5" type="System.Single"
       id="_outlineColorOffset" /><field value="0.4" type="System.Single" id="_selectionColorOffset"
       /><field value="0.1" type="System.Single" id="_visualSize" /><field type="UnityEngine.Transform"
-      id="_mountPoint" gameobject="0" /><field value="0,0,0" type="UnityEngine.Vector3"
+      id="_mountPoint" gameobject="1" /><field value="0,0,0" type="UnityEngine.Vector3"
       id="_positionOffset" /><field value="0,0,0" type="UnityEngine.Vector3" id="_angleOffset"
       /></reference></references></component>
     _serializedGameObjects:
+    - {fileID: 1000014087964678}
     - {fileID: 4000014017053856}
     _serializedCustomData: []
+--- !u!114 &114000010463211688
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000010799654524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6143b5daf9ea91f4bb63519f15cfdb44, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114000010809735778
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2154,6 +2191,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackSound: {fileID: 114000012340481030}
+  playerManager: {fileID: 114000010463211688}
   swordDamage: 30
 --- !u!114 &114000011032860064
 MonoBehaviour:
@@ -2201,6 +2239,35 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   quality: 2
+--- !u!114 &114000011799831852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013119408022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 5b038cd7bf2835e44b9493dc3bcb7d3d, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000012056102994
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2455,6 +2522,7 @@ MonoBehaviour:
   walkAudio: {fileID: 114000012256819796}
   runAudio: {fileID: 114000011032860064}
   swordAudio: {fileID: 114000013617921184}
+  auchAudio: {fileID: 114000011799831852}
 --- !u!114 &114000014237348102
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2522,6 +2590,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   initialHealth: 100
+  lifeBar: {fileID: 0}
 --- !u!124 &124000013058554780
 Behaviour:
   m_ObjectHideFlags: 1

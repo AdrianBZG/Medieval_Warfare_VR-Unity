@@ -8,6 +8,7 @@ public class PlayerAudioManager : MonoBehaviour
     public GvrAudioSource walkAudio;
     public GvrAudioSource runAudio;
     public GvrAudioSource swordAudio;
+    public GvrAudioSource auchAudio;
 
 
     private bool isWalking = false;
@@ -31,6 +32,11 @@ public class PlayerAudioManager : MonoBehaviour
             isWalking = true;
             walkAudio.Play();
         }
+    }
+
+    public void Auch ()
+    {
+        auchAudio.Play();
     }
 
     public void Run()
