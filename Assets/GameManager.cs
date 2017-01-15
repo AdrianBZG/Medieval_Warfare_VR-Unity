@@ -19,6 +19,15 @@ public class GameManager : MonoBehaviour {
     private static bool playerHaveKey = false;
 
 
+
+
+    private Camera[] cams;
+    private Vector3[] originalCamPositions;
+    private static float shake = 0;
+    private static float shakeAmount = 0.7f;
+    private static float decreaseFactor = 1.0f; 
+
+
     // public values for comparisons bassically
     // this variable contains the maximum distance where the player can interact with the campFire 
     public float campDistEvent;
@@ -36,7 +45,17 @@ public class GameManager : MonoBehaviour {
         numAlliesAlive = GameObject.FindGameObjectsWithTag("Ally").Length;
         print(numAlliesAlive + " allies alive");
 
+
+
+        cams = GameObject.FindObjectsOfType<Camera>();
+        originalCamPositions = new Vector3[cams.Length];
+
+        originalCamPositions[0] = cams[0].transform.localPosition;
+        originalCamPositions[1] = cams[1].transform.localPosition;
+
     }
+
+
 
     // This function must be called every time an enemy is killed.
     public static void KilledEnemy (int p)
@@ -101,7 +120,22 @@ public class GameManager : MonoBehaviour {
         }
         if (myDelegate != null)
             myDelegate();
-	}
+
+        if (shake > 0)
+        {
+            foreach (Camera cam in cams)
+            {
+                cam.transform.localPosition = Random.insideUnitSphere * shakeAmount;
+                shake -= Time.deltaTime * decreaseFactor;
+            }
+        }
+        else
+        {
+            shake = 0.0f;
+            cams[0].transform.localPosition = originalCamPositions[0];
+            cams[1].transform.localPosition = originalCamPositions[1];
+        }
+    }
     
     public void ShowMenu ()
     {
@@ -148,6 +182,11 @@ public class GameManager : MonoBehaviour {
     public static void LoseGame()
     {
         // Show lose Cartel ?
+    }
+
+    public static void ShakeScreen ()
+    {
+        shake = 1.5f;
     }
 
 
