@@ -41,7 +41,7 @@ MonoBehaviour:
       repeatuntil=&quot;running&quot; name=&quot;audio&quot; forcestoponexit=&quot;False&quot;
       delay=&quot;0&quot; debugbreak=&quot;False&quot; audiosource=&quot;&quot; /&gt;&lt;sequencer
       usepriorities=&quot;False&quot; repeatuntil=&quot;&quot; name=&quot;sequencer&quot;
-      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;2&quot; repeatuntil=&quot;&quot;
+      debugbreak=&quot;False&quot;&gt;&lt;move turnspeed=&quot;500&quot; repeatuntil=&quot;running&quot;
       priority=&quot;&quot; name=&quot;move&quot; movetarget=&quot;humanPosition&quot;
       movespeed=&quot;3&quot; facetarget=&quot;humanPosition&quot; debugbreak=&quot;False&quot;
       closeenoughdistance=&quot;&quot; closeenoughangle=&quot;&quot; /&gt;&lt;/sequencer&gt;&lt;/parallel&gt;&lt;/constraint&gt;&lt;constraint

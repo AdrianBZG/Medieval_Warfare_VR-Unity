@@ -30,6 +30,7 @@ public class LifeBarManager : MonoBehaviour {
 
 	public void setLifePoints (int points) {
 		lifePoints = points;
+        SetGreenBarWidth();
 	}
 
 	public void TakeDamage (int damage) {
@@ -68,9 +69,10 @@ public class LifeBarManager : MonoBehaviour {
 			greenBarTrans.localScale = new Vector3 (greenBarTrans.localScale.x, greenBarTrans.localScale.y,newWidth);
 
 			float reductionPercentage = newWidth / initialGreenBarWidthScale;
+            
 
 			greenBarTrans.localPosition -= 
-				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale );
+				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale - 1/damage);
 		}
 	}
 }

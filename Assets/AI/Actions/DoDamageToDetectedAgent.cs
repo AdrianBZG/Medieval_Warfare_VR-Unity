@@ -22,7 +22,6 @@ public class DoDamageToDetectedAgent : RAINAction
 
 
 		if (targetAgent != null) {
-
 			if (targetAgent.GetComponent<AIAgent> ().isDead ()) {
 				return ActionResult.SUCCESS;
 			} else {

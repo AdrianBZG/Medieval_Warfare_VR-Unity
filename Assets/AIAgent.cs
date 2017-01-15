@@ -45,7 +45,7 @@ public class AIAgent : MonoBehaviour {
 	}
 
 	private void checkDead() {
-		if (fatherGameObjectName != "Player") {
+		//if (fatherGameObjectName != "Player") {
 			if (this.lifePoints < 1 && !isDead ()) {
 				// Points manager
 				if (isEnemyAI) {
@@ -62,7 +62,7 @@ public class AIAgent : MonoBehaviour {
 				}
 				GetComponent<Animation> ().Play ("die1", PlayMode.StopAll);
 			}
-		}
+	//	}
 	}
 
 	public void getDamage() {
@@ -71,8 +71,11 @@ public class AIAgent : MonoBehaviour {
 			this.lifePoints -= 20;
 			checkDead ();
 			canBeHitten = false;
-		} else if(fatherGameObjectName == "Player") {
-			playerHealthManager.Damage (10);
+		} else if(canBeHitten && gameObject.tag == "Player") {
+            timeToNextAttack = 2.0f;
+            checkDead();
+            canBeHitten = false;
+			HealthManager.Damage (10);
 		}
 	}
 
