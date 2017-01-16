@@ -64,16 +64,16 @@ public class MenuManager : MonoBehaviour {
     
     public void Show ()
     {
-            //menuInstance = Instantiate(menuObject, transform.position, Quaternion.identity) as GameObject;
-            menuInstance.SetActive(true);
-            menuInstance.transform.position = transform.position;
-            menuInstance.transform.LookAt(GameObject.FindGameObjectWithTag("Player").transform.position);
-            menuInstance.transform.Rotate(Vector3.up * 180);
-            SetColorButton(0, true);
-            menuActive = true;
+        menuInstance.SetActive(true);
+        menuInstance.transform.position = transform.position;
+        menuInstance.transform.LookAt(GameObject.Find("Player").transform.position);
+        menuInstance.transform.Rotate(Vector3.up * 180);
+        SetColorButton(0, true);
+        menuActive = true;
     }
 
 
+    // This method sets color (highlight or normal) for a specific button (indicated by index).
     public void SetColorButton (int index, bool highlight)
     {
         if (!highlight)

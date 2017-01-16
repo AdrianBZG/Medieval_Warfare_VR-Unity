@@ -13,9 +13,9 @@ public class JailManager : MonoBehaviour {
             foreach (GameObject wall in jailWalls)
             {
                 wall.SetActive(false);
-                Destroy(wall.gameObject);
             }
             kidnaped.GetComponent<GvrAudioSource>().Play();
+            kidnaped.GetComponent<KidnapedManager>().Liberate();
 
         }
         else if (col.tag == "Player")

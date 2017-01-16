@@ -4,7 +4,6 @@ using System.Collections;
 public class HealthManager : MonoBehaviour {
 
     public int initialHealth;
-    public LifeBarManager lifeBar;
 
     private static int health;
 	// Use this for initialization

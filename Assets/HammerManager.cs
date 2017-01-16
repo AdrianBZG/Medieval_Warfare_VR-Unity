@@ -21,9 +21,15 @@ public class HammerManager : MonoBehaviour {
         if (col.tag == "Player" && !justHit)
         {
             justHit = true;
-            print("Lets hammer");
             soundManager.Sword();
             GameManager.ShakeScreen();
+            Invoke("canHit", hitInterval);
+        }
+
+        if (col.tag == "Ally")
+        {
+            justHit = true;
+            soundManager.Sword();
             Invoke("canHit", hitInterval);
         }
     }

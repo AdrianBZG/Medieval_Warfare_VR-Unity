@@ -697,6 +697,7 @@ GameObject:
   - 23: {fileID: 23000010994216904}
   - 65: {fileID: 65000010188754052}
   - 114: {fileID: 114000013989681850}
+  - 114: {fileID: 114000013738788642}
   m_Layer: 0
   m_Name: troll_hammer
   m_TagString: Untagged
@@ -2065,6 +2066,35 @@ MonoBehaviour:
   damageSound: {fileID: 114000010249384170}
   deadSound: {fileID: 114000013940978522}
   HammerSound: {fileID: 114000011365730450}
+--- !u!114 &114000013738788642
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013415050008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: af4c934c0ea0f474f80b97dae3c097b5, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000013940978522
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2106,6 +2136,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   soundManager: {fileID: 114000012397815114}
+  hitInterval: 0.7
 --- !u!114 &114000014218742010
 MonoBehaviour:
   m_ObjectHideFlags: 1

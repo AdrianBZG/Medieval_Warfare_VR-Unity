@@ -27,6 +27,7 @@ public class AIAgent : MonoBehaviour {
 		timeToNextAttack = 0.0f;
 		agentEntityRig = GetComponentInChildren<RAIN.Entities.EntityRig>();
 		fatherGameObjectName = transform.root.gameObject.name;
+        lastPos = transform.position;
 	}
 	
 	// Update is called once per frame
@@ -36,7 +37,10 @@ public class AIAgent : MonoBehaviour {
 		} else {
 			canBeHitten = true;
 		}
-	}
+    }
+
+    private Vector3 curPos;
+    private Vector3 lastPos;
 
 	public int getLifePoints() {
 		return lifePoints;
@@ -47,7 +51,7 @@ public class AIAgent : MonoBehaviour {
 	}
 
 	private void checkDead() {
-		//if (fatherGameObjectName != "Player") {
+		if (gameObject.tag != "Player") {
 			if (this.lifePoints < 1 && !isDead ()) {
 				// Points manager
 				if (isEnemyAI) {
@@ -55,7 +59,6 @@ public class AIAgent : MonoBehaviour {
 				} else {
 					GameManager.KilledAlly (25);
 				}
-				//
 				dead = true;
 				agentEntityRig.Entity.IsActive = false;
 				agentEngine.SetActive (false);
@@ -65,11 +68,11 @@ public class AIAgent : MonoBehaviour {
                 PlayDeadSound();
 				GetComponent<Animation> ().Play ("die1", PlayMode.StopAll);
 			}
-	//	}
+		}
 	}
 
 	public void getDamage() {
-		if (canBeHitten && fatherGameObjectName != "Player") {
+		if (canBeHitten && tag != "Player") {
 			timeToNextAttack = 2.0f;
 			this.lifePoints -= 20;
 			checkDead ();
@@ -106,5 +109,15 @@ public class AIAgent : MonoBehaviour {
     public void PlayDeadSound ()
     {
         soundManager.Invoke("Dead", 0.0f);
+    }
+
+    public void PlayWalkSound ()
+    {
+        soundManager.Invoke("Walk", 0.0f);
+    }
+
+    public void StopWalkSound ()
+    {
+        soundManager.Invoke("StopWalking", 0.0f);
     }
 }
