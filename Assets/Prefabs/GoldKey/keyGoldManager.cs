@@ -23,8 +23,15 @@ public class keyGoldManager : MonoBehaviour {
             {
                 GameManager.setPlayerHaveKey(true);
                 GetComponent<GvrAudioSource>().Play();
-                Destroy(this.gameObject);
+                //Destroy(this.gameObject);
+                Invoke("makeInvisible", 0.25f);
+
             }
         }
+    }
+
+    void makeInvisible ()
+    {
+        gameObject.SetActive(false);
     }
 }

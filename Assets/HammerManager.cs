@@ -4,6 +4,8 @@ using System.Collections;
 public class HammerManager : MonoBehaviour {
 
     public TrollSoundManager soundManager;
+    public float hitInterval = 0.7f;
+    private bool justHit = false;
 	// Use this for initialization
 	void Start () {
 	
@@ -14,11 +16,20 @@ public class HammerManager : MonoBehaviour {
 	
 	}
 
-    void OnTriggerEnter (Collider col)
+    void OnTriggerExit (Collider col)
     {
-        if (col.tag == "Player" /*&& !col.gameObject.GetComponent<AIAgent>().isDead() */)
+        if (col.tag == "Player" && !justHit)
         {
+            justHit = true;
+            print("Lets hammer");
             soundManager.Sword();
+            GameManager.ShakeScreen();
+            Invoke("canHit", hitInterval);
         }
+    }
+
+    void canHit ()
+    {
+        justHit = false;
     }
 }

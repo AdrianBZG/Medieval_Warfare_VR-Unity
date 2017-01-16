@@ -74,6 +74,5 @@ public class LifeBarManager : MonoBehaviour {
 			greenBarTrans.localPosition -= 
 				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale - 1/damage);
 		}
-        GameManager.ShakeScreen();
     }
 }

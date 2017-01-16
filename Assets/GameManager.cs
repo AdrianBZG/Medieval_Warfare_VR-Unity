@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour {
     private Camera[] cams;
     private Vector3[] originalCamPositions;
     private static float shake = 0;
-    private static float shakeAmount = 0.7f;
+    private static float shakeAmount = 0.4f;
     private static float decreaseFactor = 1.0f; 
 
 

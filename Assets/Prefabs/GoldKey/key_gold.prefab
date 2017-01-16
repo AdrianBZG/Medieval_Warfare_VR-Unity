@@ -136,7 +136,7 @@ MonoBehaviour:
   bypassRoomEffects: 0
   directivityAlpha: 0
   directivitySharpness: 1
-  gainDb: 0
+  gainDb: 24
   occlusionEnabled: 0
   playOnAwake: 0
   rolloffMode: 0
