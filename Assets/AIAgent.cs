@@ -14,6 +14,8 @@ public class AIAgent : MonoBehaviour {
 	private string fatherGameObjectName;
 	public HealthManager playerHealthManager;
 
+    public MonoBehaviour soundManager;
+
     private AudioClip damaged;
 
 	// Use this for initialization
@@ -60,6 +62,7 @@ public class AIAgent : MonoBehaviour {
 				if (GameManager.allEnemiesDead ()) {
 					GetComponent<KeyInvoker> ().instantiateKey ();
 				}
+                PlayDeadSound();
 				GetComponent<Animation> ().Play ("die1", PlayMode.StopAll);
 			}
 	//	}
@@ -84,7 +87,7 @@ public class AIAgent : MonoBehaviour {
 			timeToNextAttack = 2.0f;
 			this.lifePoints -= damage;
             if (!isDead())
-                PlaySoundDamage();
+                PlayDamageSound();
             checkDead ();
 			canBeHitten = false;
 
@@ -95,8 +98,13 @@ public class AIAgent : MonoBehaviour {
 		return dead;
 	}
 
-    public void PlaySoundDamage ()
+    public void PlayDamageSound ()
     {
-        damagedAudio.Play();
+        soundManager.Invoke("Damage", 0.0f);
+    }
+
+    public void PlayDeadSound ()
+    {
+        soundManager.Invoke("Dead", 0.0f);
     }
 }

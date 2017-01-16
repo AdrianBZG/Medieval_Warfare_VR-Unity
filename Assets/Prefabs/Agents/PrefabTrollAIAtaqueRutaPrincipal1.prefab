@@ -384,11 +384,12 @@ GameObject:
   - 54: {fileID: 54000012706691640}
   - 136: {fileID: 136000012913647640}
   - 114: {fileID: 114000014218742010}
-  - 114: {fileID: 114000010249384170}
   - 114: {fileID: 114000011775422040}
-  - 114: {fileID: 114000010946222794}
-  - 114: {fileID: 114000010248392578}
-  - 114: {fileID: 114000010410660852}
+  - 114: {fileID: 114000012397815114}
+  - 114: {fileID: 114000010249384170}
+  - 114: {fileID: 114000012055867798}
+  - 114: {fileID: 114000013940978522}
+  - 114: {fileID: 114000011365730450}
   m_Layer: 0
   m_Name: PrefabTrollAIAtaqueRutaPrincipal1
   m_TagString: Enemy
@@ -694,6 +695,8 @@ GameObject:
   - 4: {fileID: 4000010514631134}
   - 33: {fileID: 33000013868341046}
   - 23: {fileID: 23000010994216904}
+  - 65: {fileID: 65000010188754052}
+  - 114: {fileID: 114000013989681850}
   m_Layer: 0
   m_Name: troll_hammer
   m_TagString: Untagged
@@ -1543,7 +1546,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012216126884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -392.9, y: 22.930664, z: -705.8}
+  m_LocalPosition: {x: -381.9, y: 22.930664, z: -710.6}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1755,6 +1758,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 112
   m_CollisionDetection: 0
+--- !u!65 &65000010188754052
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013415050008}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46788663, y: 0.19700493, z: 1.430592}
+  m_Center: {x: 0.07685892, y: -0.0019984543, z: 0.56504816}
 --- !u!111 &111000010660181412
 Animation:
   m_ObjectHideFlags: 1
@@ -1779,18 +1794,6 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 1
---- !u!114 &114000010248392578
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012216126884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000010249384170
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1811,7 +1814,7 @@ MonoBehaviour:
   playOnAwake: 0
   rolloffMode: 0
   spread: 0
-  sourceClip: {fileID: 8300000, guid: cc5500e544d4c8d4b832330c4aafe98e, type: 3}
+  sourceClip: {fileID: 8300000, guid: 49530187fa2cb26449ffbc09e4fd9302, type: 3}
   sourceLoop: 0
   sourceMute: 0
   sourcePitch: 1
@@ -1820,18 +1823,6 @@ MonoBehaviour:
   sourceMaxDistance: 500
   sourceMinDistance: 0
   hrtfEnabled: 1
---- !u!114 &114000010410660852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012216126884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000010553924844
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1866,18 +1857,6 @@ MonoBehaviour:
     - {fileID: 1000012216126884}
     - {fileID: 4000013921901480}
     _serializedCustomData: []
---- !u!114 &114000010946222794
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1000012216126884}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000011284565736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1897,12 +1876,12 @@ MonoBehaviour:
       type="RAIN.Core.AI" refcount="1" id="0"><field value="True" type="System.Boolean"
       id="_isActive" /><field type="UnityEngine.GameObject" id="_body" gameobject="0"
       /><field type="RAIN.Memory.BasicMemory" reference="1" id="_workingMemory" childrenvisible="False"
-      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="True"
+      /><field type="RAIN.Minds.BasicMind" reference="2" id="_mind" childrenvisible="False"
       /><field type="RAIN.Motion.BasicMotor" reference="3" id="_motor" childrenvisible="False"
       /><field type="RAIN.Animation.BasicAnimator" reference="4" id="_animator" childrenvisible="False"
       /><field type="RAIN.Navigation.BasicNavigator" reference="5" id="_navigator"
       childrenvisible="False" /><field type="RAIN.Perception.BasicSenses" reference="6"
-      id="_senses" childrenvisible="False" /><field type="System.Collections.Generic.List"
+      id="_senses" childrenvisible="True" /><field type="System.Collections.Generic.List"
       id="_customElements" elementtype="RAIN.Core.CustomAIElement" childrenvisible="False"
       /></reference><reference type="RAIN.Memory.BasicMemory" refcount="1" id="1"><field
       type="System.Collections.Generic.List" id="_memoryItems" elementtype="RAIN.Memory.BasicMemory+MemoryItem"
@@ -2001,6 +1980,35 @@ MonoBehaviour:
     - {fileID: 7400000, guid: 6e18e9a0baabbf74d8734ee3a187d67f, type: 2}
     - {fileID: 7400000, guid: 04720c2db47f9a243820a81ca6fba131, type: 2}
     _serializedCustomData: []
+--- !u!114 &114000011365730450
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: af4c934c0ea0f474f80b97dae3c097b5, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
 --- !u!114 &114000011775422040
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2013,6 +2021,91 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
+--- !u!114 &114000012055867798
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: cc4c76bea4cbcfe459764c1f6d00729b, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+--- !u!114 &114000012397815114
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7ebc6f34b9093e744ad23b44877bd913, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  walkingSound: {fileID: 114000012055867798}
+  damageSound: {fileID: 114000010249384170}
+  deadSound: {fileID: 114000013940978522}
+  HammerSound: {fileID: 114000011365730450}
+--- !u!114 &114000013940978522
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6dbca64e524ea44f9b26142ec59aca8a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mixer: {fileID: 24100000, guid: ca71259be6348485abbe393157796cb8, type: 2}
+  bypassRoomEffects: 0
+  directivityAlpha: 0
+  directivitySharpness: 1
+  gainDb: 0
+  occlusionEnabled: 0
+  playOnAwake: 0
+  rolloffMode: 0
+  spread: 0
+  sourceClip: {fileID: 8300000, guid: 11267149867069642b2c5fbf82b43565, type: 3}
+  sourceLoop: 0
+  sourceMute: 0
+  sourcePitch: 1
+  sourcePriority: 128
+  sourceVolume: 1
+  sourceMaxDistance: 500
+  sourceMinDistance: 0
+  hrtfEnabled: 1
+--- !u!114 &114000013989681850
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000013415050008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ddf82a51908c874e8db879c57ce9603, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundManager: {fileID: 114000012397815114}
 --- !u!114 &114000014218742010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2032,6 +2125,7 @@ MonoBehaviour:
   timeToNextAttack: 0
   damagedAudio: {fileID: 114000010249384170}
   playerHealthManager: {fileID: 0}
+  soundManager: {fileID: 114000012397815114}
 --- !u!136 &136000012913647640
 CapsuleCollider:
   m_ObjectHideFlags: 1
