@@ -10,7 +10,10 @@ public class MenuManager : MonoBehaviour {
     public GameObject developersInstance;
     public GameObject manualInstance;
     private bool menuActive = false;
-    
+    private bool isInitialMenu = false;
+
+    private bool menuHided = false;
+
 
     public GameObject[] buttons;
     public Color highLightedButtonColor;
@@ -24,6 +27,11 @@ public class MenuManager : MonoBehaviour {
     {
         return menuActive;
     }
+
+    public void IsInitialMenu ()
+    {
+        isInitialMenu = true;
+    }
     
     
     public void Start ()
@@ -34,7 +42,22 @@ public class MenuManager : MonoBehaviour {
 
     public void Update ()
     {
-        if (menuActive)
+        if (menuHided)
+        {
+            if (Input.GetKeyDown(KeyCode.RightShift) || Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                foreach (GameObject button in buttons)
+                {
+                    button.SetActive(true);
+                }
+                menuHided = false;
+                if (developersInstance.active)
+                    developersInstance.SetActive(false);
+                else if (manualInstance.active)
+                    manualInstance.SetActive(false);
+            }
+        }
+        else if (menuActive || isInitialMenu)
         {
             if (Input.GetKeyDown(KeyCode.RightShift))
             {
@@ -44,6 +67,8 @@ public class MenuManager : MonoBehaviour {
             if (Input.GetKeyDown(KeyCode.LeftShift))
             {
                 string buttonName = buttons[inxActive].name;
+                if (buttonName == "StartButton")
+                    Application.LoadLevel(1);
                 if (buttonName == "ContinueButton")
                     gameManager.RestoreGame();
                 else if (buttonName == "DevelopersButton")
@@ -77,10 +102,21 @@ public class MenuManager : MonoBehaviour {
     public void ShowItem (GameObject item)
     {
         item.SetActive(true);
-        item.transform.position = transform.position;
-        item.transform.LookAt(GameObject.Find("Player").transform.position);
-        item.transform.Rotate(Vector3.up * 180);
+
+        if (!isInitialMenu)
+        {
+            item.transform.position = transform.position;
+            item.transform.LookAt(GameObject.Find("Player").transform.position);
+            item.transform.Rotate(Vector3.up * 180);
+        }
+        foreach (GameObject button in buttons)
+        {
+            button.SetActive(false);
+        }
+
+        menuHided = true;
     }
+    
 
 
     // This method sets color (highlight or normal) for a specific button (indicated by index).
