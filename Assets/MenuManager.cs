@@ -7,6 +7,8 @@ public class MenuManager : MonoBehaviour {
     public GameObject menuObject;
     // Use this for initialization
     public GameObject menuInstance;
+    public GameObject developersInstance;
+    public GameObject manualInstance;
     private bool menuActive = false;
     
 
@@ -45,9 +47,9 @@ public class MenuManager : MonoBehaviour {
                 if (buttonName == "ContinueButton")
                     gameManager.RestoreGame();
                 else if (buttonName == "DevelopersButton")
-                    ;
+                    ShowItem(developersInstance);
                 else if (buttonName == "ManualButton")
-                    ;
+                    ShowItem(manualInstance);
                 else if (buttonName == "ExitButton")
                     Application.Quit();
             }
@@ -70,6 +72,14 @@ public class MenuManager : MonoBehaviour {
         menuInstance.transform.Rotate(Vector3.up * 180);
         SetColorButton(0, true);
         menuActive = true;
+    }
+
+    public void ShowItem (GameObject item)
+    {
+        item.SetActive(true);
+        item.transform.position = transform.position;
+        item.transform.LookAt(GameObject.Find("Player").transform.position);
+        item.transform.Rotate(Vector3.up * 180);
     }
 
 

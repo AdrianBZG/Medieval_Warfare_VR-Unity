@@ -6,6 +6,7 @@ public class KidnapedManager : MonoBehaviour {
 
     public GameObject kidnapedBody;
     public WinningManager winManager;
+    public GvrAudioSource winSound;
     private bool liberate = false;
 	// Use this for initialization
 	void Start () {
@@ -17,12 +18,14 @@ public class KidnapedManager : MonoBehaviour {
         if (liberate)
         {
             kidnapedBody.transform.LookAt(GameObject.Find("Player").transform.position);
-            winManager.ShowUI();
+
         }
 	}
 
     public void Liberate ()
     {
         liberate = true;
+        winManager.ShowUI();
+        winSound.Play();
     }
 }

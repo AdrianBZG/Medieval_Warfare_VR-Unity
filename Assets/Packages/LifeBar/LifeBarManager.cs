@@ -35,6 +35,7 @@ public class LifeBarManager : MonoBehaviour {
 
 	public void TakeDamage (int damage) {
 		lifePoints -= damage;
+        SetGreenBarWidth();
 		if (lifePoints < 0)  {
 			dead = true;
             GameManager.myDelegate += Dead;
@@ -72,7 +73,8 @@ public class LifeBarManager : MonoBehaviour {
             
 
 			greenBarTrans.localPosition -= 
-				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale - 1/damage);
+				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale);
 		}
     }
+
 }
