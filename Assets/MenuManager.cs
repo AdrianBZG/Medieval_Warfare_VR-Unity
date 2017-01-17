@@ -107,6 +107,13 @@ public class MenuManager : MonoBehaviour {
         {
             item.transform.position = transform.position;
             item.transform.LookAt(GameObject.Find("Player").transform.position);
+            if (item == developersInstance)
+            {
+                item.transform.Translate(-0.5f * Vector3.up);
+                item.transform.Translate(-1.0f * GameObject.Find("MainCamera").transform.right);
+            }
+            else if (item == manualInstance)
+                item.transform.Translate( - GameObject.Find("MainCamera").transform.right);
             item.transform.Rotate(Vector3.up * 180);
         }
         foreach (GameObject button in buttons)

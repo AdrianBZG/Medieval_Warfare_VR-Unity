@@ -6,15 +6,18 @@ public class GameManager : MonoBehaviour {
 
 
     public MenuManager menuManager;
-    
-	// public GameObjects
-	public GameObject player;
-	public GameObject campFire;
-    
+
+    // public GameObjects
+    public GameObject player;
+
 
     private static int numEnemiesAlive;
     private static int numAlliesAlive;
-    
+
+    public GameObject scoreUICube;
+    public ScoreUIManager scoreUIManager;
+    public GameObject lifeBar;
+
     private static int points;
 
     private static bool playerHaveKey = false;
@@ -26,20 +29,22 @@ public class GameManager : MonoBehaviour {
     private Vector3[] originalCamPositions;
     private static float shake = 0;
     private static float shakeAmount = 0.4f;
-    private static float decreaseFactor = 1.0f; 
+    private static float decreaseFactor = 1.0f;
 
+    public GameObject campFire;
 
     // public values for comparisons bassically
     // this variable contains the maximum distance where the player can interact with the campFire 
+
     public float campDistEvent;
 
 
-	// Private assets
-	private CampfireManager campfireManager;
+    // Private assets
+    private CampfireManager campfireManager;
 
-	// Use this for initialization
-	void Start () {
-		campfireManager = campFire.GetComponent<CampfireManager>();
+    // Use this for initialization
+    void Start() {
+        campfireManager = campFire.GetComponent<CampfireManager>();
 
         numEnemiesAlive = GameObject.FindGameObjectsWithTag("Enemy").Length;
         print(numEnemiesAlive + " enemies alive");
@@ -56,13 +61,13 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public static void AddEnemy ()
+    public static void AddEnemy()
     {
         numEnemiesAlive++;
         print("Ahora hay " + numEnemiesAlive + " enemigos vivos.");
     }
 
-    public static void AddAlly ()
+    public static void AddAlly()
     {
         numAlliesAlive++;
     }
@@ -70,7 +75,7 @@ public class GameManager : MonoBehaviour {
 
 
     // This function must be called every time an enemy is killed.
-    public static void KilledEnemy (int p)
+    public static void KilledEnemy(int p)
     {
         points += p;
         numEnemiesAlive--;
@@ -78,14 +83,14 @@ public class GameManager : MonoBehaviour {
     }
 
     // This function must be called every time an ally is killed.
-    public static void KilledAlly (int p)
+    public static void KilledAlly(int p)
     {
         points -= p;
         numAlliesAlive--;
         CheckLose();
     }
 
-    private static void CheckWin ()
+    private static void CheckWin()
     {
         if (numEnemiesAlive == 0)
         {
@@ -101,20 +106,44 @@ public class GameManager : MonoBehaviour {
         }
     }
 
-    public static bool allEnemiesDead ()
+    public static bool allEnemiesDead()
     {
         return numEnemiesAlive == 0;
     }
 
-    public static void setPlayerHaveKey (bool haveKey)
+    public static void setPlayerHaveKey(bool haveKey)
     {
         playerHaveKey = haveKey;
         print("PlayerHaveKey");
+        if (playerHaveKey)
+        {
+            TrollSpawnManager.KeyCaptured();
+        }
     }
+
+ 
 
     public static bool getPlayerHaveKey ()
     {
         return playerHaveKey;
+    }
+
+    public static int GetScorePoints ()
+    {
+        return points;
+    }
+
+    public static void WinPoints (int p)
+    {
+        points += p;
+    }
+    
+    // Return false if you can lose/use too much points.
+    public static bool LossPoints (int p)
+    {
+        if (points - p < 0) return false;
+        points -= p;
+        return true;
     }
 
 
@@ -147,6 +176,8 @@ public class GameManager : MonoBehaviour {
             cams[0].transform.localPosition = originalCamPositions[0];
             cams[1].transform.localPosition = originalCamPositions[1];
         }
+
+        scoreUIManager.SetScore(points);
     }
     
     public void ShowMenu ()
@@ -154,6 +185,8 @@ public class GameManager : MonoBehaviour {
         if (!menuManager.IsActive())
         {
             PauseGame();
+            scoreUICube.SetActive(false);
+            lifeBar.SetActive(false);
             menuManager.Show();
         }
     }
@@ -172,12 +205,12 @@ public class GameManager : MonoBehaviour {
     {
         Time.timeScale = 1.0f;
         menuManager.Hide();
-        print("restore game");
         foreach (GvrAudioSource source in GameObject.FindObjectsOfType<GvrAudioSource>())
         {
             source.UnPause();
-            print("source unpaused");
         }
+        lifeBar.SetActive(true);
+        scoreUICube.SetActive(true);
     }
 
     public static void EndGame ()

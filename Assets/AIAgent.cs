@@ -62,6 +62,7 @@ public class AIAgent : MonoBehaviour {
 				// Points manager
 				if (isEnemyAI) {
 					GameManager.KilledEnemy (50);
+                    GameManager.WinPoints(50);
 				} else {
 					GameManager.KilledAlly (25);
 				}
