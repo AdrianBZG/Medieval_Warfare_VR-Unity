@@ -20,6 +20,12 @@ public class AIAgent : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        if (tag == "Enemy") {
+            GameManager.AddEnemy();
+        }
+        else if (tag == "Ally") {
+            GameManager.AddAlly();
+        }
         damaged  = damagedAudio.GetComponent<AudioClip>();
 		this.lifePoints = 100;
 		dead = false;

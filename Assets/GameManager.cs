@@ -10,6 +10,7 @@ public class GameManager : MonoBehaviour {
 	// public GameObjects
 	public GameObject player;
 	public GameObject campFire;
+    
 
     private static int numEnemiesAlive;
     private static int numAlliesAlive;
@@ -53,6 +54,17 @@ public class GameManager : MonoBehaviour {
         originalCamPositions[0] = cams[0].transform.localPosition;
         originalCamPositions[1] = cams[1].transform.localPosition;
 
+    }
+
+    public static void AddEnemy ()
+    {
+        numEnemiesAlive++;
+        print("Ahora hay " + numEnemiesAlive + " enemigos vivos.");
+    }
+
+    public static void AddAlly ()
+    {
+        numAlliesAlive++;
     }
 
 
