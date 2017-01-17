@@ -3,30 +3,77 @@ using System.Collections;
 
 public class RecruitmentManager : MonoBehaviour {
 
-    public GameObject soldatPrefab;
-    public Transform soldatSpawn;
+    public GameObject soldierPrefab;
+    public GameObject recruitmentText;
+    public GameObject notEnoughPointsText;
+    public Transform soldierSpawn;
     public int soldierPrice = 50;
-	// Use this for initialization
-	void Start () {
-	    
-	}
+
+    private bool waitingForRecruitment;
+    // Use this for initialization
+    void Start () {
+
+        waitingForRecruitment = false;
+    }
 	
 	// Update is called once per frame
 	void Update () {
 	
 	}
 
-    public void InstantiateSoldat ()
+    public int GetSoldierPrice ()
+    {
+        return soldierPrice;
+    }
+
+    public void ShowNotEnoughPoints()
+    {
+        notEnoughPointsText.SetActive(true);
+        recruitmentText.SetActive(false);
+    }
+
+    public void InstantiateSoldier ()
     { 
         if (GameManager.GetScorePoints() > soldierPrice)
         {
-            Instantiate(soldatPrefab, soldatSpawn.position, Quaternion.identity);
+            Instantiate(soldierPrefab, soldierSpawn.position, Quaternion.identity);
         }
     }
 
 
-    void OnTriggerEnter (Collider col)
+    void OnTriggerEnter(Collider col)
     {
+        if (col.tag == "Player")
+        {
+            if (!IsWaitingForRecruitment())
+                ActivateRecruitmentText();
+        }
+    }
 
+    void OnTriggerExit(Collider col)
+    {
+        if (col.tag == "Player")
+        {
+            if (IsWaitingForRecruitment())
+                DeactivateRecruitmentText();
+        }
+    }
+
+    public void ActivateRecruitmentText()
+    {
+        recruitmentText.SetActive(true);
+        notEnoughPointsText.SetActive(false);
+        waitingForRecruitment = true;
+    }
+
+    public bool IsWaitingForRecruitment()
+    {
+        return waitingForRecruitment;
+    }
+
+    public void DeactivateRecruitmentText()
+    {
+        recruitmentText.SetActive(false);
+        waitingForRecruitment = false;
     }
 }

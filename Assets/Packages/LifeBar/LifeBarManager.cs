@@ -61,19 +61,19 @@ public class LifeBarManager : MonoBehaviour {
 		if (!IsDead()) {
 
 			float lifeReduction = (float) lifePoints / (float) maxLifePoints;
+            
 
 			float newWidth = initialGreenBarWidthScale * lifeReduction;
-			print (newWidth);
 
 			Transform greenBarTrans = greenBar.transform;
 
-			greenBarTrans.localScale = new Vector3 (greenBarTrans.localScale.x, greenBarTrans.localScale.y,newWidth);
-
+			greenBarTrans.localScale = new Vector3 (greenBarTrans.localScale.x, greenBarTrans.localScale.y, newWidth);
+            /*
 			float reductionPercentage = newWidth / initialGreenBarWidthScale;
             
-
 			greenBarTrans.localPosition -= 
 				new Vector3 (0, 0, reductionPercentage * initialGreenBarWidthScale);
+            */
 		}
     }
 

@@ -18,6 +18,8 @@ public class GameManager : MonoBehaviour {
     public ScoreUIManager scoreUIManager;
     public GameObject lifeBar;
 
+    public RecruitmentManager recruitmentManager;
+
     private static int points;
 
     private static bool playerHaveKey = false;
@@ -178,6 +180,20 @@ public class GameManager : MonoBehaviour {
         }
 
         scoreUIManager.SetScore(points);
+
+        if (recruitmentManager.IsWaitingForRecruitment() && Input.GetKeyDown(KeyCode.RightShift))
+        {
+            if (GetScorePoints() >= recruitmentManager.GetSoldierPrice())
+            {
+                recruitmentManager.InstantiateSoldier();
+                LossPoints(recruitmentManager.GetSoldierPrice());
+            }
+            else
+            {
+                recruitmentManager.ShowNotEnoughPoints();
+            }
+            
+        }
     }
     
     public void ShowMenu ()
@@ -216,7 +232,7 @@ public class GameManager : MonoBehaviour {
     public static void EndGame ()
     {
         print("End game");
-        Application.Quit();
+        Application.LoadLevel(0);
     }
 
     public static void WinGame ()
