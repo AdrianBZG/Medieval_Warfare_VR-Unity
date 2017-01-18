@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class CampfireManager : MonoBehaviour {
+public class CampfireManager : MonoBehaviour, IGvrGazeResponder {
 
 	public Light fireLight;
 	public ParticleSystem fireParticles;
@@ -42,6 +43,17 @@ public class CampfireManager : MonoBehaviour {
 		return isOn;
 	}
 
+    void IGvrGazeResponder.OnGazeEnter()
+    {
+        TurnOn();
+    }
 
+    void IGvrGazeResponder.OnGazeExit()
+    {
+        TurnOff();
+    }
 
+    void IGvrGazeResponder.OnGazeTrigger()
+    {
+    }
 }

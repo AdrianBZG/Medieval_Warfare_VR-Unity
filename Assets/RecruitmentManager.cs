@@ -1,7 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System;
 
-public class RecruitmentManager : MonoBehaviour {
+public class RecruitmentManager : MonoBehaviour, IGvrGazeResponder {
 
     public GameObject soldierPrefab;
     public GameObject recruitmentText;
@@ -75,5 +76,21 @@ public class RecruitmentManager : MonoBehaviour {
     {
         recruitmentText.SetActive(false);
         waitingForRecruitment = false;
+    }
+
+    void IGvrGazeResponder.OnGazeEnter()
+    {
+        if (!IsWaitingForRecruitment())
+            ActivateRecruitmentText();
+    }
+
+    void IGvrGazeResponder.OnGazeExit()
+    {
+        if (IsWaitingForRecruitment())
+            DeactivateRecruitmentText();
+    }
+
+    void IGvrGazeResponder.OnGazeTrigger()
+    {
     }
 }
