@@ -390,6 +390,7 @@ GameObject:
   - 114: {fileID: 114000012055867798}
   - 114: {fileID: 114000013940978522}
   - 114: {fileID: 114000011365730450}
+  - 114: {fileID: 114000012772032206}
   m_Layer: 0
   m_Name: PrefabTrollAIAtaqueRutaPrincipal1
   m_TagString: Enemy
@@ -1547,7 +1548,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1000012216126884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -381.9, y: 22.930664, z: -710.6}
+  m_LocalPosition: {x: -391, y: 22.930664, z: -693.4}
   m_LocalScale: {x: 2.5, y: 2.5, z: 2.5}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_Children:
@@ -1922,8 +1923,8 @@ MonoBehaviour:
       id="wrapMode" /><field type="System.Collections.Generic.List" id="mixingTransforms"
       elementtype="RAIN.Animation.BasicAnimator+BasicAnimatorState+MixingTransform"
       /></reference><reference type="RAIN.Perception.Sensors.VisualSensor" refcount="1"
-      id="8"><field value="True" type="System.Boolean" id="_showVisual" /><field value="Eyes"
-      type="System.String" id="_sensorName" /><field value="True" type="System.Boolean"
+      id="8"><field value="False" type="System.Boolean" id="_showVisual" /><field
+      value="Eyes" type="System.String" id="_sensorName" /><field value="True" type="System.Boolean"
       id="_isActive" /><field value="0,6,0,5529412" type="UnityEngine.Color" id="_sensorColor"
       /><field type="UnityEngine.Transform" id="_mountPoint" gameobject="3" /><field
       value="0,0,0" type="UnityEngine.Vector3" id="_positionOffset" /><field value="0,0,0"
@@ -1934,7 +1935,7 @@ MonoBehaviour:
       id="_horizontalAngle" /><field value="180" type="System.Single" id="_verticalAngle"
       /><field value="False" type="System.Boolean" id="_lineOfSight" /><field value="-5"
       type="UnityEngine.LayerMask" id="_lineOfSightMask" /></reference><reference
-      type="RAIN.Perception.Sensors.VisualSensor" refcount="1" id="9"><field value="True"
+      type="RAIN.Perception.Sensors.VisualSensor" refcount="1" id="9"><field value="False"
       type="System.Boolean" id="_showVisual" /><field value="Proximity" type="System.String"
       id="_sensorName" /><field value="True" type="System.Boolean" id="_isActive"
       /><field value="0,6,0,5529412" type="UnityEngine.Color" id="_sensorColor" /><field
@@ -2066,6 +2067,18 @@ MonoBehaviour:
   damageSound: {fileID: 114000010249384170}
   deadSound: {fileID: 114000013940978522}
   HammerSound: {fileID: 114000011365730450}
+--- !u!114 &114000012772032206
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1000012216126884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41304d8d3afce944380e26637155d62a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  keyObject: {fileID: 170560, guid: cc5de5e674870ca479a40105f80555ad, type: 2}
 --- !u!114 &114000013738788642
 MonoBehaviour:
   m_ObjectHideFlags: 1

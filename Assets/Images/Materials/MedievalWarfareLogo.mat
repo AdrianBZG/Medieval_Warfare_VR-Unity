@@ -9,7 +9,7 @@ Material:
   m_Name: MedievalWarfareLogo
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
   m_ShaderKeywords: _ALPHAPREMULTIPLY_ON
-  m_LightmapFlags: 4
+  m_LightmapFlags: 6
   m_CustomRenderQueue: 3000
   stringTagMap:
     RenderType: Transparent
@@ -85,10 +85,10 @@ Material:
       second: 10
     - first:
         name: _GlossMapScale
-      second: 1
+      second: 0.774
     - first:
         name: _Glossiness
-      second: 0.635
+      second: 0.055
     - first:
         name: _GlossyReflections
       second: 1
