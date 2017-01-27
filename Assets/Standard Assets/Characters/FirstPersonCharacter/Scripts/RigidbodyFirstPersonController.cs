@@ -158,6 +158,7 @@ namespace UnityStandardAssets.Characters.FirstPerson
             if (Input.GetButtonDown("Jump") && !m_Jump)
             {
                 m_Jump = true;
+                anim.SetBool("jump", m_Jump);
             }
         }
 
