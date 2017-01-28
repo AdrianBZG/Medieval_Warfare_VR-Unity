@@ -21,7 +21,7 @@ QualitySettings:
     textureQuality: 3
     anisotropicTextures: 0
     antiAliasing: 0
-    softParticles: 1
+    softParticles: 0
     softVegetation: 0
     realtimeReflectionProbes: 0
     billboardsFaceCameraPosition: 0
