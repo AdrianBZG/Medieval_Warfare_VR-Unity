@@ -15,7 +15,7 @@ Virtual Reality game for the Intelligent Interfaces subject, made with Unity Eng
 ## DEVELOPERS
 
 ### Adrián Rodríguez Bazaga
-  - Email: arodriba@ull.es
+  - Email: adrian@qmindgroup.com
   - [Personal page](http://www.adrianbazaga.com/)
 
 ### Eleazar Díaz Delgado
